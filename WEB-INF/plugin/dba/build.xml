@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!--
+=================================================================================
+  GroupSession2 Database Administrator
+  共通クラスのビルドが完了していること
+  create    JTS
+=================================================================================
+-->
+
+<project name="GroupSession2 Database Administrator" default="build" basedir=".">
+<!--
+=================================================================================
+Properties: 変数の定義
+=================================================================================
+ -->
+
+<!-- ディレクトリ名の定義 -->
+<property  name="GSPLGIN_ID"      value="dba" />
+<property  name="SRC.DIR"      value="./src" />
+<property  name="PLGIN_CLS.DIR"      value="../../classes" />
+<property  name="PLGIN_PKG.DIR"      value="${PLGIN_CLS.DIR}/jp/groupsession/v2/dba" />
+
+<!-- Compile Options -->
+<property  name="BLD.TARGET"   value="11" />
+<property  name="DEBUG"        value="yes" />
+<property  name="DEPRECATION"  value="true" />
+<property  name="SRC.ENC"      value="UTF-8" />
+
+<!-- ClassPath -->
+<path id="app_classpath">
+
+  <!-- OSのクラスパス -->
+  <pathelement path="${classpath}" />
+
+  <!-- LIBディレクトリ -->
+  <!-- プラグインのみで使用するlib -->
+  <!-- fileset dir="./lib">
+    <include name="**/*.jar"/>
+    <include name="**/*.zip"/>
+  </fileset -->
+  <!-- アプリケーション共通lib -->
+  <fileset dir="../../../../lib">
+    <include name="**/*.jar"/>
+    <include name="**/*.zip"/>
+  </fileset>
+  <!-- アプリケーション共通lib2 -->
+  <fileset dir="../../../../war/WEB-INF/lib">
+    <include name="**/*.jar"/>
+    <include name="**/*.zip"/>
+  </fileset>
+  <!-- アプリケーション 共通クラス -->
+  <pathelement location="../../../../war/WEB-INF/classes" />
+</path>
+
+<!--
+=================================================================================
+BUILD: 初期化
+=================================================================================
+ -->
+<target name="init"
+	    description="init"
+  >
+  <tstamp>
+    <format property="YMDHMS"
+            pattern="yyyy.MM.dd hh:mm:ss"
+    />
+  </tstamp>
+  <echo message="Project Name  = ${ant.project.name}" />
+  <echo message="Project Root  = ${basedir}" />
+  <echo message="JDK Version   = ${ant.java.version}" />
+  <echo message="Building Time = ${YMDHMS}" />
+  <echo message="" />
+
+</target>
+
+<!--
+=================================================================================
+BUILD: Classファイルの作成(コンパイル)
+=================================================================================
+ -->
+
+<target name="build">
+
+  <mkdir dir="${PLGIN_CLS.DIR}" />
+
+  <javac
+    classpathref = "app_classpath"
+    destdir      = "${PLGIN_CLS.DIR}"
+    source       = "${BLD.TARGET}"
+    target       = "${BLD.TARGET}"
+    debug        = "${DEBUG}"
+    deprecation  = "${DEPRECATION}"
+    encoding     = "${SRC.ENC}">
+  	<src path="${SRC.DIR}" />
+    <compilerarg value="-Xlint:unchecked" />
+	<include name="**/*.java"/>
+<!--	<exclude name="**/*Test.java" /> -->
+  </javac>
+
+  <!-- Native2ascii -->
+  <native2ascii encoding="${SRC.ENC}"
+    src="."
+    dest="."
+    includes="**/Messages.properties.SJIS" ext="" />
+  <native2ascii encoding="${SRC.ENC}"
+	src="."
+	dest="${PLGIN_CLS.DIR}"
+	includes="**/*.properties" ext=".properties" />
+
+
+</target>
+
+<!--
+=================================================================================
+CLEAN:*.*~ファイルとbldディレクトリを削除します。
+		defaultexcludes="no"にしなければ『~』は削除されない。
+=================================================================================
+ -->
+<target name="clean">
+  <delete dir="${PLGIN_PKG.DIR}" />
+  <delete file="${PLGIN_CLS.DIR}/DaoResource.properties" />
+
+</target>
+</project>

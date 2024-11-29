@@ -1,0 +1,25 @@
+create table CMN_INFO_MSG
+(
+  IMS_SID      integer         not null,
+  IMS_MSG      varchar(450)   ,
+  IMS_VALUE    varchar(3000)  ,
+  IMS_FR_DATE  timestamp      not null,
+  IMS_TO_DATE  timestamp      not null,
+  IMS_JTKB     integer        not null,
+  IMS_KBN      integer        not null,
+  IMS_DWEEK1   integer        ,
+  IMS_DWEEK2   integer        ,
+  IMS_DWEEK3   integer        ,
+  IMS_DWEEK4   integer        ,
+  IMS_DWEEK5   integer        ,
+  IMS_DWEEK6   integer        ,
+  IMS_DWEEK7   integer        ,
+  IMS_DAY      integer        ,
+  IMS_WEEK     integer        ,
+  IMS_AUID     integer        not null,
+  IMS_ADATE    timestamp      not null,
+  IMS_EUID    integer        not null,
+  IMS_EDATE    timestamp      not null,
+  IMS_HOLKBN   integer        not null,
+  primary key (IMS_SID)
+);

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin>
+
+  <!-- プラグインID -->
+  <id>user</id>
+  <short-id>usr</short-id>
+
+  <!-- 名称  -->
+  <name>ユーザ情報</name>
+  <name-eng>Employee Information</name-eng>
+
+  <!-- 説明  -->
+  <description>
+GroupSessionのユーザを検索、ユーザ情報を参照することができます。
+エクスポート（CSV形式）も可能です。
+  </description>
+
+  <!-- 拡張ポイント 他のプラグインからも利用可能な情報を記述する -->
+  <extention-info>
+    <!-- 拡張ポイント名  -->
+    <name>user_info_view</name>
+    <!-- 拡張ポイントURL  -->
+    <url>/user/usr000.do</url>
+    <!-- 拡張ポイントの説明  -->
+    <description>
+    パラメータ「usid」にユーザSID値をセットし、上記URLにアクセスすると、
+    該当するユーザSIDのユーザ情報を表示します。
+    画面サイズが400*200になっているので、JavaScriptのOpenWindowでサイズを
+    指定し、使用してください。
+    </description>
+  </extention-info>
+
+  <!-- トップメニュー トップメニューの情報を記述する 記述しない場合はメニューに表示しない  -->
+  <topmenu-info>
+    <!-- メニューへの表示/非表示 -->
+    <view>true</view>
+    <!-- メニューアイコンクリック時に遷移するURL -->
+    <url>../user/usr040.do</url>
+    <!-- メニューアイコンの表示順 未設定の場合は表示順が設定されているプラグインの次に表示する -->
+    <order>2</order>
+  </topmenu-info>
+
+  <!-- リスナー  -->
+  <!-- データ使用量の操作時に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>useddatalistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.usr.UsrUsedDetailListenerImpl</listener-class>
+  </listener>
+  
+  <!-- バッチ処理の実行を行うリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>batchjob</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.usr.UsrBatchListenerImpl</listener-class>
+  </listener>
+
+  <!-- ヘルプ情報を設定する。 -->
+  <help-info>
+    <!-- メニューの表示/非表示 -->
+    <view>true</view>
+  </help-info>
+
+  <!-- メイン管理者設定画面に表示する情報を記述する  -->
+  <adminsetting-info>
+    <!-- メイン管理者設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 管理者設定メニューURL -->
+    <url>../user/usr080.do</url>
+    <!-- アイコン -->
+    <icon>../user/images/original/menu_icon_single.png</icon>
+    <iconClassic>../user/images/classic/menu_icon_single.gif</iconClassic>
+  </adminsetting-info>
+
+  <!-- メイン個人設定画面に表示する情報を記述する  -->
+  <privatesetting-info>
+    <!-- メイン個人設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 個人設定メニューURL -->
+    <url>../user/usr042.do</url>
+    <!-- アイコン -->
+    <icon>../user/images/original/menu_icon_single.png</icon>
+    <iconClassic>../user/images/classic/menu_icon_single.gif</iconClassic>
+  </privatesetting-info>
+  <!-- ログ出力を設定する。 -->
+  <log-info>
+    <!-- ログ出力 対象/非対象 -->
+    <output>true</output>
+  </log-info>
+</plugin>

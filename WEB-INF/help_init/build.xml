@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=================================================================================
+  GroupSession ヘルプ 索引
+  create    2007/04/10  Japan Total System Co.,Ltd.
+  create    2011/08/10  Japan Total System Co.,Ltd.
+  create    2012/12/27  Japan Total System Co.,Ltd.
+  create    2013/08/05  Japan Total System Co.,Ltd.
+=================================================================================
+-->
+
+<project name="GroupSession create Help index" default="build" basedir=".">
+<!--
+=================================================================================
+Properties: 変数の定義
+=================================================================================
+ -->
+
+<!-- ディレクトリ名の定義 -->
+<property  name="SRC.DIR"      value="./src" />
+<property  name="HELP.CLS.DIR" value="./classes" />
+<property  name="HELP.LOG.DIR" value="./log" />
+<property  name="HELP.CONF.DIR" value="./conf" />
+<property  name="HELP.INIT.CLS.DIR" value="${HELP.CLS.DIR};${HELP.CONF.DIR}" />
+<!-- ヘルプインデックスの格納先 -->
+<property  name="LUCENE_INDEX.DIR" value="../plugin/help/help_index" />
+
+<!-- Compile Options -->
+<property  name="BLD.TARGET"   value="11" />
+<property  name="DEBUG"        value="yes" />
+<property  name="DEPRECATION"  value="true" />
+<property  name="SRC.ENC"      value="UTF-8" />
+
+
+<!-- ClassPath -->
+<path id="app_classpath">
+
+  <!-- OSのクラスパス -->
+  <!-- pathelement path="${classpath}" / -->
+
+  <!-- アプリケーション共通lib -->
+  <fileset dir="../../../lib">
+    <include name="**/*.jar"/>
+  </fileset>
+  <!-- コンバート用Libを使用 -->
+  <fileset dir="../convert/lib">
+    <include name="**/*.jar"/>
+  </fileset>
+  <!-- アプリケーション 共通クラス -->
+  <pathelement location="../classes" />
+
+</path>
+
+<!-- ClassPath -->
+<path id="app_classpath_init">
+
+  <!-- OSのクラスパス -->
+  <!-- pathelement path="${classpath}" / -->
+
+  <!-- アプリケーション共通lib2 -->
+  <fileset dir="../lib">
+    <include name="**/*.jar"/>
+  </fileset>
+
+  <!-- コンバート用Libを使用 -->
+  <fileset dir="../convert/lib">
+    <include name="**/*.jar"/>
+  </fileset>
+  <!-- アプリケーション 共通クラス -->
+  <pathelement location="../classes" />
+
+  <!-- ヘルプクラスディレクトリ -->
+  <pathelement location="${HELP.CLS.DIR}" />
+
+  <!-- ヘルプ設定ファイルディレクトリ -->
+  <pathelement location="${HELP.CONF.DIR}" />
+
+</path>
+
+<!-- ClassPath -->
+<path id="app_classpath_release">
+  <!-- アプリケーション共通lib -->
+  <fileset dir="../../../../../lib">
+    <include name="**/*.jar"/>
+  </fileset>
+  <!-- コンバート用Libを使用 -->
+  <fileset dir="../convert/lib">
+    <include name="**/*.jar"/>
+  </fileset>
+  <!-- アプリケーション 共通クラス -->
+  <pathelement location="../classes" />
+</path>
+
+<!--
+=================================================================================
+BUILD: 初期化
+=================================================================================
+ -->
+<target name="init"
+        description="init"
+  >
+  <tstamp>
+    <format property="YMDHMS"
+            pattern="yyyy.MM.dd hh:mm:ss"
+    />
+  </tstamp>
+  <echo message="Project Name  = ${ant.project.name}" />
+  <echo message="Project Root  = ${basedir}" />
+  <echo message="JDK Version   = ${ant.java.version}" />
+  <echo message="Building Time = ${YMDHMS}" />
+  <echo message="CLASSPATH = classpath" />
+  <echo message="" />
+
+</target>
+
+<!--
+=================================================================================
+BUILD: Classファイルの作成(コンパイル)
+=================================================================================
+ -->
+
+<target name="build">
+  <antcall target="init" />
+  <mkdir dir="${HELP.CLS.DIR}" />
+
+  <javac
+    classpathref = "app_classpath"
+    destdir      = "${HELP.CLS.DIR}"
+    source       = "${BLD.TARGET}"
+    target       = "${BLD.TARGET}"
+    deprecation  = "${DEPRECATION}"
+    encoding     = "${SRC.ENC}">
+      <src path="${SRC.DIR}" />
+    <compilerarg value="-Xlint:unchecked" />
+    <include name="**/*.java"/>
+<!--    <exclude name="**/*Test.java" /> -->
+  </javac>
+
+</target>
+
+<target name="build_release">
+  <antcall target="init" />
+  <mkdir dir="${HELP.CLS.DIR}" />
+
+  <javac
+    classpathref = "app_classpath_release"
+    destdir      = "${HELP.CLS.DIR}"
+    source       = "${BLD.TARGET}"
+    target       = "${BLD.TARGET}"
+    deprecation  = "${DEPRECATION}"
+    encoding     = "${SRC.ENC}">
+      <src path="${SRC.DIR}" />
+    <compilerarg value="-Xlint:unchecked" />
+    <include name="**/*.java"/>
+  </javac>
+
+</target>
+
+<!--
+=================================================================================
+CREATE INDEX: Indexファイルの作成
+=================================================================================
+-->
+
+<target name="create_Index">
+  <antcall target="init" />
+  <mkdir dir="${HELP.LOG.DIR}" />
+  <java
+      classname="jp.groupsession.v2.help_init.Init"
+      classpathref = "app_classpath_init"
+      fork="true">
+      <arg value = "${basedir}/../../" />
+  </java>
+  <echo message="Create help_Index process end." />
+</target>
+
+<!--
+=================================================================================
+CLEAN:classesディレクトリとログディレクトリを削除します。
+=================================================================================
+ -->
+<target name="clean">
+
+  <delete dir="${HELP.CLS.DIR}" />
+  <delete dir="${HELP.LOG.DIR}" />
+  <delete dir="${LUCENE_INDEX.DIR}" />
+
+</target>
+
+<!--
+=================================================================================
+CLEAN:classesディレクトリとログディレクトリを削除します。
+=================================================================================
+ -->
+<target name="delete_log">
+  <delete dir="${HELP.LOG.DIR}" />
+</target>
+
+</project>

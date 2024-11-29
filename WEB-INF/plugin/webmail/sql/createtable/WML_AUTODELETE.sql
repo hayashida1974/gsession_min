@@ -1,0 +1,27 @@
+create table WML_AUTODELETE
+(
+  WAD_DUST_KBN            integer           not null,
+  WAD_DUST_YEAR           integer,
+  WAD_DUST_MONTH          integer,
+  WAD_DUST_DAY            integer,
+  WAD_SEND_KBN            integer           not null,
+  WAD_SEND_YEAR           integer,
+  WAD_SEND_MONTH          integer,
+  WAD_SEND_DAY            integer,
+  WAD_DRAFT_KBN           integer           not null,
+  WAD_DRAFT_YEAR          integer,
+  WAD_DRAFT_MONTH         integer,
+  WAD_DRAFT_DAY           integer,
+  WAD_RESV_KBN            integer           not null,
+  WAD_RESV_YEAR           integer,
+  WAD_RESV_MONTH          integer,
+  WAD_RESV_DAY            integer,
+  WAD_KEEP_KBN            integer           not null,
+  WAD_KEEP_YEAR           integer,
+  WAD_KEEP_MONTH          integer,
+  WAD_KEEP_DAY            integer,
+  WAD_AUID                integer           not null,
+  WAD_ADATE               timestamp        not null,
+  WAD_EUID                integer           not null,
+  WAD_EDATE               timestamp        not null
+);

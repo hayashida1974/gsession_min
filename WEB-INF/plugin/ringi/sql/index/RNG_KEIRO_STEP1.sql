@@ -1,0 +1,1 @@
+create index RNG_KEIRO_STEP1 on RNG_KEIRO_STEP(RNG_SID);

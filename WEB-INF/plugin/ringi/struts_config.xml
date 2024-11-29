@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+        <form-bean name="rngmainForm" type="jp.groupsession.v2.rng.main.RngMainForm" />
+        <form-bean name="rng010Form" type="jp.groupsession.v2.rng.rng010.Rng010Form" />
+        <form-bean name="rng020Form" type="jp.groupsession.v2.rng.rng020.Rng020Form" />
+        <form-bean name="rng020knForm" type="jp.groupsession.v2.rng.rng020kn.Rng020knForm" />
+        <form-bean name="rng030Form" type="jp.groupsession.v2.rng.rng030.Rng030Form" />
+        <form-bean name="rng040Form" type="jp.groupsession.v2.rng.rng040.Rng040Form" />
+        <form-bean name="rng050Form" type="jp.groupsession.v2.rng.rng050.Rng050Form" />
+        <form-bean name="rng060Form" type="jp.groupsession.v2.rng.rng060.Rng060Form" />
+        <form-bean name="rng070Form" type="jp.groupsession.v2.rng.rng070.Rng070Form" />
+        <form-bean name="rng080Form" type="jp.groupsession.v2.rng.rng080.Rng080Form" />
+        <form-bean name="rng090Form" type="jp.groupsession.v2.rng.rng090.Rng090Form" />
+        <form-bean name="rng090knForm" type="jp.groupsession.v2.rng.rng090kn.Rng090knForm" />
+        <form-bean name="rng100Form" type="jp.groupsession.v2.rng.rng100.Rng100Form" />
+        <form-bean name="rng110Form" type="jp.groupsession.v2.rng.rng110.Rng110Form" />
+        <form-bean name="rng110keiroDialogForm" type="jp.groupsession.v2.rng.rng110keiro.Rng110KeiroDialogForm" />
+
+        <form-bean name="rng120Form" type="jp.groupsession.v2.rng.rng120.Rng120Form" />
+        <form-bean name="rng130Form" type="jp.groupsession.v2.rng.rng130.Rng130Form" />
+        <form-bean name="rng140Form" type="jp.groupsession.v2.rng.rng140.Rng140Form" />
+        <form-bean name="rng140knForm" type="jp.groupsession.v2.rng.rng140kn.Rng140knForm" />
+        <form-bean name="rng150Form" type="jp.groupsession.v2.rng.rng150.Rng150Form" />
+        <form-bean name="rng160Form" type="jp.groupsession.v2.rng.rng160.Rng160Form" />
+        <form-bean name="rng160knForm" type="jp.groupsession.v2.rng.rng160kn.Rng160knForm" />
+        <form-bean name="rng170Form" type="jp.groupsession.v2.rng.rng170.Rng170Form" />
+        <form-bean name="rng170knForm" type="jp.groupsession.v2.rng.rng170kn.Rng170knForm" />
+        <form-bean name="rng180Form" type="jp.groupsession.v2.rng.rng180.Rng180Form" />
+        <form-bean name="rng180knForm" type="jp.groupsession.v2.rng.rng180kn.Rng180knForm" />
+        <form-bean name="rng190Form" type="jp.groupsession.v2.rng.rng190.Rng190Form" />
+        <form-bean name="rng200Form" type="jp.groupsession.v2.rng.rng200.Rng200Form" />
+        <form-bean name="rng210Form" type="jp.groupsession.v2.rng.rng210.Rng210Form" />
+        <form-bean name="rng210knForm" type="jp.groupsession.v2.rng.rng210kn.Rng210knForm" />
+        <form-bean name="rng230Form" type="jp.groupsession.v2.rng.rng230.Rng230Form" />
+        <form-bean name="rng240Form" type="jp.groupsession.v2.rng.rng240.Rng240Form" />
+        <form-bean name="rng250Form" type="jp.groupsession.v2.rng.rng250.Rng250Form" />
+        <form-bean name="rng260Form" type="jp.groupsession.v2.rng.rng260.Rng260Form" />
+        <form-bean name="rng270Form" type="jp.groupsession.v2.rng.rng270.Rng270Form" />
+        <form-bean name="rng290Form" type="jp.groupsession.v2.rng.rng290.Rng290Form" />
+
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+  <global-forwards type="org.apache.struts.action.ActionForward">
+      <forward name="rngAdmMenu" path="/ringi/rng040.do" />
+  </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+       <!-- メイン -->
+       <action
+            name="rngmainForm"
+            path="/ringi/rngmain"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rngmain.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.main.RngMainAction">
+
+            <forward name="detail" path="/ringi/rng030.do" />
+       </action>
+
+       <!-- 稟議TOP -->
+       <action
+            name="rng010Form"
+            path="/ringi/rng010"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng010.Rng010Action">
+            <forward name="rng020" path="/ringi/rng020.do" />
+            <forward name="rng030" path="/ringi/rng030.do" />
+            <forward name="rng040" path="/ringi/rng040.do" />
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="rng080" path="/ringi/rng080.do" />
+            <forward name="search" path="/ringi/rng130.do" />
+            <forward name="mine" path="/ringi/rng010.do" />
+       </action>
+
+       <!-- 稟議作成 -->
+       <action
+            name="rng020Form"
+            path="/ringi/rng020"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng020.Rng020Action">
+            <forward name="rng010" path="/ringi/rng010.do" />
+            <forward name="rng020kn" path="/ringi/rng020kn.do" />
+            <forward name="rng030" path="/ringi/rng030.do" />
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="search" path="/ringi/rng130.do" />
+            <forward name="rctSelectDialog" path="/WEB-INF/plugin/ringi/jsp/rng020_rctSelect.jsp" />
+       </action>
+
+       <!-- 稟議作成確認 -->
+       <action
+            name="rng020knForm"
+            path="/ringi/rng020kn"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng020kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng020kn.Rng020knAction">
+            <forward name="rng010" path="/ringi/rng010.do" />
+            <forward name="rng020" path="/ringi/rng020.do?CMD=rng020knback" />
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="search" path="/ringi/rng130.do" />
+       </action>
+
+       <!-- 稟議承認 -->
+       <action
+            name="rng030Form"
+            path="/ringi/rng030"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng030.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng030.Rng030Action">
+            <forward name="rng010" path="/ringi/rng010.do" />
+            <forward name="rng020" path="/ringi/rng020.do" />
+            <forward name="rng050" path="/ringi/rng050.do" />
+            <forward name="rng070" path="/ringi/rng070.do" />
+            <forward name="search" path="/ringi/rng130.do" />
+            <forward name="mine" path="/ringi/rng030.do" />
+            <forward name="loadAddKeiro" path="/WEB-INF/plugin/ringi/jsp/rng030_addKeiro.jsp" />
+       </action>
+
+       <!-- 管理者設定 稟議 -->
+       <action
+            name="rng040Form"
+            path="/ringi/rng040"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng040.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng040.Rng040Action">
+            <forward name="rng010" path="/ringi/rng010.do" />
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="rng230" path="/ringi/rng230.do" />
+            <forward name="rng050" path="/ringi/rng050.do" />
+            <forward name="rng070" path="/ringi/rng070.do" />
+            <forward name="rng160" path="/ringi/rng160.do" />
+            <forward name="rng170" path="/ringi/rng170.do" />
+            <forward name="rng180" path="/ringi/rng180.do" />
+            <forward name="rng260" path="/ringi/rng260.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+            <forward name="smlsetting" path="/ringi/rng190.do" />
+            <forward name="rng200" path="/ringi/rng200.do" />
+       </action>
+
+       <!-- 申請中案件管理 -->
+       <action
+            name="rng050Form"
+            path="/ringi/rng050"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng050.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng050.Rng050Action">
+            <forward name="rng030" path="/ringi/rng030.do" />
+            <forward name="rng040" path="/ringi/rng040.do" />
+       </action>
+
+       <!-- 内容テンプレート一覧 -->
+       <action
+            name="rng060Form"
+            path="/ringi/rng060"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng060.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng060.Rng060Action">
+            <forward name="rng010" path="/ringi/rng010.do" />
+            <forward name="rng040" path="/ringi/rng040.do" />
+            <forward name="rng080" path="/ringi/rng080.do" />
+            <forward name="rng020" path="/ringi/rng020.do" />
+            <forward name="rng090" path="/ringi/rng090.do" />
+            <forward name="rng140" path="/ringi/rng140.do" />
+            <forward name="rng150" path="/ringi/rng150.do" />
+       </action>
+
+       <!-- 完了案件管理 -->
+       <action
+            name="rng070Form"
+            path="/ringi/rng070"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng070.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng070.Rng070Action">
+            <forward name="rng030" path="/ringi/rng030.do" />
+            <forward name="rng040" path="/ringi/rng040.do" />
+            <forward name="rng070" path="/ringi/rng070.do" />
+            <forward name="delexe" path="/ringi/rng070.do" />
+            <forward name="delback" path="/ringi/rng070.do" />
+       </action>
+
+       <!-- 個人設定 稟議 -->
+       <action
+            name="rng080Form"
+            path="/ringi/rng080"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng080.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng080.Rng080Action">
+            <forward name="rng010" path="/ringi/rng010.do" />
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="rng100" path="/ringi/rng100.do" />
+            <forward name="rng120" path="/ringi/rng120.do" />
+            <forward name="rng250" path="/ringi/rng250.do" />
+            <forward name="rng270" path="/ringi/rng270.do" />
+            <forward name="mainPriSetting" path="/main/man030.do" />
+       </action>
+
+       <!-- 内容テンプレート登録 -->
+       <action
+            name="rng090Form"
+            path="/ringi/rng090"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng090.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng090.Rng090Action">
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="delexe" path="/ringi/rng090.do" />
+            <forward name="delback" path="/ringi/rng090.do" />
+            <forward name="rng090kn" path="/ringi/rng090kn.do" />
+            <forward name="loadKeiro" path="/WEB-INF/plugin/ringi/jsp/rng090_keiro.jsp" />
+            <forward name="loadIdList" path="/WEB-INF/plugin/ringi/jsp/rng090_idlist.jsp" />
+            <forward name="dlgPrefApiList" path="/WEB-INF/plugin/ringi/jsp/rng090_apilist.jsp" />
+            <forward name="dlgPrefApiConnect" path="/WEB-INF/plugin/ringi/jsp/rng090_apiconnect.jsp" />
+            <forward name="commitPrefApiConnect" path="/WEB-INF/plugin/ringi/jsp/rng090_apiconnect_result.jsp" />
+            <forward name="dlgPrefApiConnectParam" path="/WEB-INF/plugin/ringi/jsp/rng090_apiconnect_param.jsp" />
+            <forward name="dlgPrefApiConnectParamChild"  path="/WEB-INF/plugin/ringi/jsp/rng090_apiconnect_param_child.jsp" />
+            <forward name="commitPrefApiConnectParam" path="/WEB-INF/plugin/ringi/jsp/rng090_apiconnect_param_result.jsp" />
+            <forward name="dlgPrefApiConnectParamCond" path="/WEB-INF/plugin/ringi/jsp/rng090_apiconnect_param_cond.jsp" />
+       </action>
+
+       <!-- 内容テンプレート登録確認 -->
+       <action
+            name="rng090knForm"
+            path="/ringi/rng090kn"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng090kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng090kn.Rng090knAction">
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="rng090back" path="/ringi/rng090.do" />
+       </action>
+
+       <!-- 経路テンプレート一覧(個人) -->
+       <action
+            name="rng100Form"
+            path="/ringi/rng100"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng100.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng100.Rng100Action">
+
+            <forward name="entry" path="/ringi/rng110.do" />
+            <forward name="backMenu" path="/ringi/rng080.do" />
+
+       </action>
+
+       <!-- 経路テンプレート登録(個人) -->
+       <action
+            name="rng110Form"
+            path="/ringi/rng110"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng110.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng110.Rng110Action">
+
+            <forward name="mine" path="/ringi/rng110.do" />
+            <forward name="keirolist" path="/ringi/rng100.do" />
+            <forward name="reloadDrag" path="/WEB-INF/plugin/ringi/jsp/rng110_dragArea.jsp" />
+
+       </action>
+       <!-- 経路テンプレート 経路要素ダイアログ -->
+       <action
+            name="rng110keiroDialogForm"
+            path="/ringi/rng110keiroDialog"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng110_keiro_dialog.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng110keiro.Rng110KeiroDialogAction">
+            <!-- 経路テンプレート 経路要素選択表示用 -->
+            <forward name="dsp" path="/WEB-INF/plugin/ringi/jsp/rng110_keiroDsp.jsp" />
+
+       </action>
+
+       <!-- 個人設定 基本設定 -->
+       <action
+            name="rng120Form"
+            path="/ringi/rng120"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng120.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng120.Rng120Action">
+
+            <forward name="mine" path="/ringi/rng120.do" />
+            <forward name="confmenu" path="/ringi/rng080.do" />
+
+       </action>
+
+       <!-- 稟議詳細検索 -->
+       <action
+            name="rng130Form"
+            path="/ringi/rng130"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng130.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng130.Rng130Action">
+
+            <forward name="backList" path="/ringi/rng010.do" />
+            <forward name="edit" path="/ringi/rng020.do" />
+            <forward name="detail" path="/ringi/rng030.do" />
+            <forward name="search" path="/ringi/rng130.do" />
+
+       </action>
+
+       <!-- カテゴリ編集 -->
+       <action
+            name="rng140Form"
+            path="/ringi/rng140"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng140.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng140.Rng140Action">
+
+            <forward name="okclick" path="/ringi/rng140kn.do" />
+            <forward name="rng140back" path="/ringi/rng060.do" />
+            <forward name="rng140" path="/ringi/rng140.do" />
+            <forward name="delexe" path="/ringi/rng140.do" />
+            <forward name="delback" path="/ringi/rng140.do" />
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="rng150" path="/ringi/rng150.do" />
+       </action>
+
+       <!-- カテゴリ編集確認 -->
+       <action
+            name="rng140knForm"
+            path="/ringi/rng140kn"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng140kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng140kn.Rng140knAction">
+
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="rng140knback" path="/ringi/rng140.do" />
+            <forward name="rng150" path="/ringi/rng150.do" />
+       </action>
+
+       <!-- カテゴリ一覧 -->
+       <action
+            name="rng150Form"
+            path="/ringi/rng150"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng150.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng150.Rng150Action">
+
+            <forward name="rng060" path="/ringi/rng060.do" />
+            <forward name="rng140" path="/ringi/rng140.do" />
+       </action>
+
+       <!-- 自動削除設定 -->
+       <action
+            name="rng160Form"
+            path="/ringi/rng160"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng160.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng160.Rng160Action">
+
+            <forward name="confirm" path="/ringi/rng160kn.do" />
+       </action>
+
+       <!-- 自動削除設定確認 -->
+       <action
+            name="rng160knForm"
+            path="/ringi/rng160kn"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng160kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng160kn.Rng160knAction">
+
+            <forward name="backInput" path="/ringi/rng160.do" />
+       </action>
+
+       <!-- 手動データ削除 -->
+       <action
+            name="rng170Form"
+            path="/ringi/rng170"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng170.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng170.Rng170Action">
+
+            <forward name="confirm" path="/ringi/rng170kn.do" />
+       </action>
+
+       <!-- 手動データ削除確認 -->
+       <action
+            name="rng170knForm"
+            path="/ringi/rng170kn"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng170kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng170kn.Rng170knAction">
+
+            <forward name="backInput" path="/ringi/rng170.do" />
+       </action>
+
+       <!-- 管理者設定 基本設定 -->
+       <action
+            name="rng180Form"
+            path="/ringi/rng180"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng180.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng180.Rng180Action">
+
+            <forward name="confirm" path="/ringi/rng180kn.do" />
+       </action>
+
+       <!-- 管理者設定 基本設定確認 -->
+       <action
+            name="rng180knForm"
+            path="/ringi/rng180kn"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng180kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng180kn.Rng180knAction">
+
+            <forward name="backInput" path="/ringi/rng180.do" />
+       </action>
+
+       <!-- 管理者設定 ショートメール通知設定 -->
+       <action
+            name="rng190Form"
+            path="/ringi/rng190"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng190.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng190.Rng190Action">
+       </action>
+
+       <!-- 管理者設定 申請ID一覧 -->
+       <action
+            name="rng200Form"
+            path="/ringi/rng200"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng200.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng200.Rng200Action">
+
+            <forward name="ok" path="/ringi/rng200.do" />
+            <forward name="add" path="/ringi/rng210.do" />
+            <forward name="edit" path="/ringi/rng210.do" />
+       </action>
+
+       <!-- 管理者設定 申請ID設定 -->
+       <action
+            name="rng210Form"
+            path="/ringi/rng210"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng210.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng210.Rng210Action">
+
+            <forward name="rngIdMenu" path="/ringi/rng200.do" />
+            <forward name="ok" path="/ringi/rng210kn.do" />
+            <forward name="delComp" path="/ringi/rng210.do" />
+            <forward name="delback" path="/ringi/rng210.do" />
+       </action>
+
+       <!-- 管理者設定 申請ID設定確認 -->
+       <action
+            name="rng210knForm"
+            path="/ringi/rng210kn"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng210kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng210kn.Rng210knAction">
+            <forward name="backList" path="/ringi/rng210.do" />
+            <forward name="rng200" path="/ringi/rng200.do" />
+       </action>
+
+       <!-- 管理者設定 経路テンプレート管理 -->
+       <action
+            name="rng230Form"
+            path="/ringi/rng230"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng230.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng230.Rng230Action">
+
+            <forward name="entry" path="/ringi/rng240.do" />
+            <forward name="backMenu" path="/ringi/rng040.do" />
+            <forward name="select" path="/WEB-INF/plugin/ringi/jsp/rng230_keirotemplatelist.jsp" />
+
+       </action>
+
+       <!-- 管理者設定 経路テンプレート登録 -->
+       <action
+            name="rng240Form"
+            path="/ringi/rng240"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng240.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng240.Rng240Action">
+
+            <forward name="mine" path="/ringi/rng240.do" />
+            <forward name="keirolist" path="/ringi/rng230.do" />
+            <forward name="reloadDrag" path="/WEB-INF/plugin/ringi/jsp/rng110_dragArea.jsp" />
+       </action>
+
+       <!-- 個人設定 ショートメール通知設定 -->
+       <action
+            name="rng250Form"
+            path="/ringi/rng250"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng250.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng250.Rng250Action">
+            <forward name="confmenu" path="/ringi/rng080.do" />
+       </action>
+
+       <!-- 管理者設定 代理人設定 -->
+       <action
+            name="rng260Form"
+            path="/ringi/rng260"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng260.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng260.Rng260Action">
+            <forward name="ok" path="/ringi/rng260.do" />
+       </action>
+
+       <!-- 個人設定 代理人設定 -->
+       <action
+            name="rng270Form"
+            path="/ringi/rng270"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng270.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng270.Rng270Action">
+            <forward name="confmenu" path="/ringi/rng080.do" />
+       </action>
+
+       <!-- テンプレートプレビュー -->
+       <action
+            name="rng290Form"
+            path="/ringi/rng290"
+            scope="request"
+            input="/WEB-INF/plugin/ringi/jsp/rng290.jsp"
+            validate="false"
+            type="jp.groupsession.v2.rng.rng290.Rng290Action">
+       </action>
+
+    </action-mappings>
+
+</struts-config>

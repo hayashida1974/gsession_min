@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin>
+
+  <!-- プラグインID -->
+  <id>bulletin</id>
+  <short-id>bbs</short-id>
+
+  <!-- 名称  -->
+  <name>掲示板</name>
+  <name-eng>Bulletin</name-eng>
+
+  <!-- 説明  -->
+  <description>
+複数の掲示板を作成、運営することができ、掲示板毎にアクセス可能なユーザを割り当てることができます。
+検索機能により、後日内容を確認することも簡単です。
+投稿時にファイルを複数添付することができます。
+</description>
+
+  <!-- リスナー  -->
+  <!-- メイン画面のインフォーメーションメッセージを表示する際に呼び出されるリスナー  -->
+  <!-- リスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>mainInfo</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.bbs.BbsMainInfoMessage</listener-class>
+  </listener>
+  <!-- バッチ処理の実行を行うリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>batchjob</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.bbs.BulletinBatchListenerImpl</listener-class>
+  </listener>
+  <!-- ユーザ・グループの追加・修正の際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>userlistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.bbs.BbsIUserGroupListenerImpl</listener-class>
+  </listener>
+  <!-- ユーザのログイン・ログアウトの際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>loginlogoutlistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.bbs.BbsGsLoginLogoutListenerImpl</listener-class>
+  </listener>
+  <!-- データ使用量の操作時に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>useddatalistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.bbs.BbsUsedDetailListenerImpl</listener-class>
+  </listener>
+  <!-- ショートメール通知設定の際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>smailSendSettinglistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.bbs.BbsISmlSendSettingListenerImpl</listener-class>
+  </listener>
+  <!-- 自動削除設定の際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>autoManualDeletelistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.bbs.BbsIAutoManualDeleteListenerImpl</listener-class>
+  </listener>
+
+
+  <!-- 拡張ポイント 他のプラグインからも利用可能な情報を記述する -->
+  <extention-info>
+    <!-- 拡張ポイント名 -->
+    <name>user_info_view</name>
+    <!-- 拡張ポイントURL -->
+    <url>/user/usr000.do</url>
+    <!-- 拡張ポイントの説明 -->
+    <description>
+    パラメータ「usid」にユーザSID値をセットし、上記URLにアクセスすると、
+    該当するユーザSIDのユーザ情報を表示します。
+    画面サイズが400*200になっているので、JavaScriptのOpenWindowでサイズを
+    指定し、使用してください。
+    </description>
+  </extention-info>
+
+
+  <!-- メイン画面表示 メイン画面に表示する情報を記述する -->
+  <mainscreen-info>
+    <!-- メイン画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- メイン画面へ表示する画面のID javascriptを使用したい場合はこの名前で作成する 未設定の場合は表示しない -->
+    <id>bbsmain</id>
+    <!-- 表示位置の設定 左=1 右=2  未設定の場合は左へ表示する -->
+    <position>1</position>
+    <!-- 表示順の設定 未設定の場合は表示順が設定されているプラグインの下に表示する -->
+    <order>2</order>
+    <!-- ポートレット画面への表示/非表示 pluginPortletタグ未記入の場合は非表示 -->
+    <pluginPortlet>true</pluginPortlet>
+  </mainscreen-info>
+
+  <!-- トップメニュー トップメニューの情報を記述する 記述しない場合はメニューに表示しない  -->
+  <topmenu-info>
+    <!-- メニューへの表示/非表示 -->
+    <view>true</view>
+    <!-- メニューアイコンクリック時に遷移するURL -->
+    <url>../bulletin/bbs010.do</url>
+    <!-- メニューアイコンの表示順 未設定の場合は表示順が設定されているプラグインの次に表示する -->
+    <order>5</order>
+  </topmenu-info>
+
+  <!-- ヘルプ情報を設定する。 -->
+  <help-info>
+    <!-- メニューの表示/非表示 -->
+    <view>true</view>
+  </help-info>
+
+  <!-- メイン管理者設定画面に表示する情報を記述する  -->
+  <adminsetting-info>
+    <!-- メイン管理者設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 管理者設定メニューURL -->
+    <url>../bulletin/bbs110.do</url>
+    <!-- アイコン -->
+    <icon>../bulletin/images/original/menu_icon_single.png</icon>
+    <iconClassic>../bulletin/images/classic/menu_icon_single.gif</iconClassic>
+  </adminsetting-info>
+
+  <!-- メイン個人設定画面に表示する情報を記述する  -->
+  <privatesetting-info>
+    <!-- メイン個人設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 個人設定メニューURL -->
+    <url>../bulletin/bbs130.do</url>
+    <!-- アイコン -->
+    <icon>../bulletin/images/original/menu_icon_single.png</icon>
+    <iconClassic>../bulletin/images/classic/menu_icon_single.gif</iconClassic>
+  </privatesetting-info>
+  <!-- ログ出力を設定する。 -->
+  <log-info>
+    <!-- ログ出力 対象/非対象 -->
+    <output>true</output>
+  </log-info>
+
+  <!-- プラグインポートレットに関する情報を記述する  -->
+  <!-- ポートレット - スレッド一覧 -->
+  <portlet-info>
+    <!-- ポートレットの画面ID 未設定の場合は表示しない -->
+    <id>bbsptl010</id>
+    <!-- ポートレット選択画面の画面ID 未設定の場合は表示しない -->
+    <list-id>bbsptl020</list-id>
+    <!-- ポートレットのbizクラス -->
+    <biz-class>jp.groupsession.v2.bbs.ptl010.BbsPtl010Biz</biz-class>
+    <!-- ポートレット選択画面の画面名を取得するためのメッセージID -->
+    <list-nameid>mainscreeninfo.bulletin.bbsptl010</list-nameid>
+    <!-- プラグインポートレット一覧(セレクトボックスへの表示順) -->
+    <order>2</order>
+  </portlet-info>
+</plugin>

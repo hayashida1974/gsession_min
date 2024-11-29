@@ -1,0 +1,17 @@
+ insert 
+ into 
+ CMN_CONTM(
+   CNT_PXY_USE,
+   CNT_PXY_URL,
+   CNT_PXY_PORT,
+   CNT_SESSION_TIME,
+   CNT_MENU_STATIC
+ )
+ values
+ (
+   null,
+   null,
+   null,
+   720,
+   0
+ );

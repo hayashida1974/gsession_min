@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin>
+
+  <!-- プラグインID -->
+  <id>address</id>
+  <short-id>adr</short-id>
+
+  <!-- 名称  -->
+  <name>アドレス帳</name>
+  <name-eng>Address</name-eng>
+
+  <!-- 説明  -->
+  <description>
+アドレス帳の登録、閲覧を行うことができ、相手の住所、TEL、FAX、メールアドレス、会社情報、コンタクト履歴等が管理できます。インポート、エクスポート（CSV形式）も可能です。
+  </description>
+
+  <!-- リスナー  -->
+  <!-- データ使用量の操作時に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>useddatalistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.adr.AdrUsedDetailListenerImpl</listener-class>
+  </listener>
+
+  <!-- バッチ処理の実行を行うリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>batchjob</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.adr.AdrBatchListenerImpl</listener-class>
+  </listener>
+
+  <!-- トップメニュー トップメニューの情報を記述する 記述しない場合はメニューに表示しない  -->
+  <topmenu-info>
+    <!-- メニューへの表示/非表示 -->
+    <view>true</view>
+    <!-- メニューアイコンクリック時に遷移するURL -->
+    <url>../address/adr010.do</url>
+    <!-- メニューアイコンの表示順 未設定の場合は表示順が設定されているプラグインの次に表示する -->
+    <order>12</order>
+  </topmenu-info>
+
+  <!-- メイン画面表示 メイン画面に表示する情報を記述する -->
+  <mainscreen-info>
+    <!-- メイン画面への表示/非表示 未設定の場合は表示しない -->
+    <view>false</view>
+  </mainscreen-info>
+
+  <!-- ヘルプ情報を設定する。 -->
+  <help-info>
+    <!-- メニューの表示/非表示 -->
+    <view>true</view>
+  </help-info>
+
+  <!-- メイン管理者設定画面に表示する情報を記述する  -->
+  <adminsetting-info>
+    <!-- メイン管理者設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 管理者設定メニューURL -->
+    <url>../address/adr030.do</url>
+    <!-- アイコン -->
+    <icon>../address/images/original/menu_icon_single.png</icon>
+    <iconClassic>../address/images/classic/menu_icon_single.gif</iconClassic>
+  </adminsetting-info>
+
+  <!-- メイン個人設定画面に表示する情報を記述する  -->
+  <privatesetting-info>
+    <!-- メイン個人設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 個人設定メニューURL -->
+    <url>../address/adr050.do</url>
+    <!-- アイコン -->
+    <icon>../address/images/original/menu_icon_single.png</icon>
+    <iconClassic>../address/images/classic/menu_icon_single.gif</iconClassic>
+  </privatesetting-info>
+  <!-- ログ出力を設定する。 -->
+  <log-info>
+    <!-- ログ出力 対象/非対象 -->
+    <output>true</output>
+  </log-info>
+</plugin>

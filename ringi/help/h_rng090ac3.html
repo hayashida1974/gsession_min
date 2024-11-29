@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>[GROUPSESSION ヘルプ] 稟議 決済後アクション設定 パラメータ設定</title>
+<link rel=stylesheet href="../../help/css/default.css" type="text/css">
+<link rel=stylesheet href="../../help/css/help.css" type="text/css">
+<script src='../../common/js/jquery-1.5.2.min.js'></script>
+<script type="text/javascript" src="../../help/js/help.js"></script>
+
+</head>
+<!-- '../help_ajax/ajax_xxx_left_list.html' を編集 -->
+<body onLoad="ajaxGetContents('help-left-func-in', '../help_ajax/ajax_rng_left_list.html');chengeHeaderText('[ 稟議 決済後アクション設定 パラメータ設定 ]');">
+<div id="container"><a name="top"></a>
+
+
+  <div align="right" class="help-align-right">
+  <input type="button" value="稟議 トップへ" class="btn_base0" onClick="commonHelpLocationChange('./index.html');">
+  </div>
+    <!-- ナビゲーション -->
+  <div id="help-left-func">
+    <div class="help-content-tr"><div class="help-content-tl"><img src="../../help/images/help_content_text_dsp.gif" alt="画面一覧" height="30"></div></div>
+      <div class="help-content-mr"><div class="help-content-ml">
+      <div id="help-left-func-in">
+            <!-- ここにajax_xxx_left_list.htmlが入ります -->
+      </div>
+    </div></div>
+        <div class="help-content-br"><div class="help-content-bl"><img src="../../help/images/spacer.gif" width="1" height="15" alt=""></div>
+      </div>
+  </div>
+
+  <!-- コンテンツ -->
+  <div id="help-right-func">
+    <div class="help-content-tr"><div class="help-content-tl"><img src="../../help/images/help_content_text_func.gif" alt="機能詳細" height="30"></div></div>
+    <div class="help-content-mr"><div class="help-content-ml pad">
+      <p>決済後アクション設定で使用される連携APIのパラメータを設定します。</p>
+      <!-- img要素のsrc,alt属性を編集 -->
+      <h1 class="help-right-func-img"><img src="images/scr_help_big_rng090ac3.gif" alt="稟議 決済後アクション設定 パラメータ設定"></h1>
+      <p class="help-right-func-p">機能説明</p>
+      <table summary="機能詳細" class="help-right-func-more_new" cellpadding="0" cellspacing="0">
+      <!-- h2要素の中身と、p要素の中身を編集。項目数の調整 -->
+        <tr>
+        <td>
+          <h2 class="num-back01">設定値結合方法選択</h2>
+          <p>複数設定された設定値を文字列として結合するか、配列パラメータとしてまとめるかを選択します。</p>
+        </td>
+        <td>
+          <h2 class="num-back02">登録ボタン</h2>
+          <p>パラメータ設定を終了し、<a href="./h_rng090ac2.html"><span class="textLink">パラメータ一覧</span></a>に戻ります。</p>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <h2 class="num-back03">キャンセル</h2>
+          <p>パラメータ設定を終了し、<a href="./h_rng090ac2.html"><span class="textLink">パラメータ一覧</span></a>に戻ります。</p>
+          <p>パラメータ設定を表示してからの設定内容は失われます。</p>
+        </td>
+        <td>
+          <h2 class="num-back04">例として出力</h2>
+          <p>チェックを入れると下部に出力するパラメータサンプルの対象になります。</p>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <h2 class="num-back05">設定値を削除ボタン</h2>
+          <p>ボタンが配置された設定値を削除します。</p>
+          <p>設定値が0件の場合、決済後に実行されるパラメータの値は空になります。</p>
+        </td>
+        <td>
+          <h2 class="num-back06">選択値</h2>
+          <p>パラメータとして設定する値を選択します</p>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <h2 class="num-back07">設定値/フォーマット</h2>
+          <p>選択値をパラメータとして送る際のフォーマットや、選択値の持つどの情報を送るかを選択します。</p>
+        </td>
+        <td>
+          <h2 class="num-back08">使用条件</h2>
+          <p>パラメータに値が設定される条件を設定します。</p>
+          <p>条件が満たされない場合、パラメータの値は空になります。</p>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <h2 class="num-back09">使用条件削除ボタン</h2>
+          <p>ボタンが配置された使用条件を削除します。</p>
+        </td>
+        <td>
+          <h2 class="num-back10">条件を追加</h2>
+          <p>使用条件を追加します<br>
+             複数設定された使用条件をすべて満たさなければパラメータの値は空になります。</p>
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <h2 class="num-back11">設定値追加ボタン</h2>
+          <p>設定値を追加します</p>
+          <p>複数の設定値は決済時にまとめてパラメータに設定されます。</p>
+        </td>
+        <td>
+          <h2 class="num-back12">パラメータサンプル</h2>
+          <p>パラメータサンプルを出力します。</p>
+          <p>パラメータサンプルには選択値、設定値/フォーマットで選択結果によって決まった文字列が出力されます。</p>
+          <p>設定値が複数ある場合のパラメータの参考としてください。</p>
+        </td>
+        </tr>
+
+      </table>
+
+      <!-- 項目の説明 -->
+      <p id="help_setteiti_list" class="help-right-func-p">選択値・設定値/フォーマット一覧</p>
+      <table width="60%" border="1"style="border:solid 1px #cccccc!important;" >
+      <tr><th colspan="2" style="background-color:#e5edfe!important;"> ユーザ情報</th></tr>
+      <tr>
+        <th width="50%" align="center" valign="middle" style="background-color:#e5edfe!important;">選択値</th>
+        <th width="50%" align="center" style="background-color:#e5edfe!important;">設定値/フォーマット</th>
+      </tr>
+      <tr>
+        <td>
+          <div>申請ユーザ</div>
+          <div>最後の承認ユーザ</div>
+          <div>指定ユーザ</div>
+          <div>ユーザ選択のフォーム要素</div>
+        </td>
+        <td>
+          <div>決済時の選択値のユーザ情報から以下の値を設定できます。</div>
+          <div> ユーザID </div>
+          <div> ユーザ姓 名</div>
+          <div> ユーザ姓 </div>
+          <div> ユーザ名 </div>
+          <div> ユーザ姓名（カナ） </div>
+          <div> ユーザ姓（カナ） </div>
+          <div> ユーザ名（カナ） </div>
+          <div> 社員/職員番号 </div>
+          <div> 所属 </div>
+          <div> 役職 </div>
+          <div> 性別 </div>
+          <div> 入社年月日(西暦 /区切りフォーマット)</div>
+          <div> 生年月日(西暦/区切りフォーマット） </div>
+          <div> メールアドレス1 </div>
+          <div> メールアドレス2 </div>
+          <div> メールアドレス3 </div>
+          <div> 郵便番号(ハイフン付き) </div>
+          <div> 住所 </div>
+          <div> 電話番号1 </div>
+          <div> 電話番号2 </div>
+          <div> 電話番号3 </div>
+          <div> FAX1 </div>
+          <div> FAX2 </div>
+          <div> FAX3 </div>
+        </td>
+      </tr>
+      <tr><th colspan="2" style="background-color:#e5edfe!important;">グループ情報</th></tr>
+      <tr>
+        <th width="50%" align="center" valign="middle" style="background-color:#e5edfe!important;">選択値</th>
+        <th width="50%" align="center" style="background-color:#e5edfe!important;">設定値/フォーマット</th>
+      </tr>
+      <tr>
+        <td>
+          <div>指定グループ</div>
+          <div>グループ選択のフォーム要素</div>
+        </td>
+        <td>
+          <div>決済時の選択値のグループ情報から以下の値を設定できます。</div>
+          <div> グループID </div>
+          <div> グループ名 </div>
+        </td>
+      </tr>
+      <tr><th colspan="2" style="background-color:#e5edfe!important;">日時情報</th></tr>
+      <tr>
+        <th width="50%" align="center" valign="middle" style="background-color:#e5edfe!important;">選択値</th>
+        <th width="50%" align="center" style="background-color:#e5edfe!important;">設定値/フォーマット</th>
+      </tr>
+      <tr>
+        <td>
+          <div> 申請日</div>
+          <div> 決済日</div>
+          <div> 日付選択のフォーム要素</div>
+          <div> 時間選択のフォーム要素</div>
+        </td>
+        <td>
+          <div>決済時の選択値の日時から設定する日時フォーマットを設定できます。</div>
+          <div> yyyy/MM/dd HH:mm </div>
+          <div> yyyy-MM-dd HH-mm </div>
+          <div> yyyyMMdd HHmm </div>
+          <div> yyyy/MM/dd </div>
+          <div> yyyy-MM-dd </div>
+          <div> yyyyMMdd </div>
+          <div> yyyy </div>
+          <div> yy(年の下2桁） </div>
+          <div> MM(月） </div>
+          <div> dd </div>
+          <div> HH:mm </div>
+          <div> HH-mm </div>
+          <div> HHmm </div>
+          <div> HH(時 24時間表記） </div>
+          <div> mm(分） </div>
+        </td>
+      </tr>
+      <tr><th colspan="2" style="background-color:#e5edfe!important;">その他</th></tr>
+      <tr>
+        <th width="50%" align="center" valign="middle" style="background-color:#e5edfe!important;">選択値</th>
+        <th width="50%" align="center" style="background-color:#e5edfe!important;">設定値/フォーマット</th>
+      </tr>
+      <tr>
+        <td>
+          <div> 手入力</div>
+        </td>
+        <td>
+          <div>パラメータ設定に入力した値をパラメータに設定します。</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div> テキスト入力のフォーム要素</div>
+          <div> ラジオボタンのフォーム要素</div>
+          <div> チェックボックスのフォーム要素</div>
+          <div> コンボボックスのフォーム要素</div>
+          <div> 数値入力のフォーム要素</div>
+          <div> 自動計算（合計）のフォーム要素</div>
+          <div> 自動計算（その他）のフォーム要素</div>
+        </td>
+        <td>
+          <div>申請時の入力値がパラメータに設定されます。</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div> 添付ファイル</div>
+        </td>
+        <td>
+          <div>Content-typeがform-data/multipartのAPIの場合、添付ファイルを送信します</div>
+        </td>
+      </tr>
+      </table>
+    </div></div>
+
+  </div>
+  <div class="help-content-br"><div class="help-content-bl"><img src="../../help/images/spacer.gif" width="1" height="15" alt=""></div></div>
+
+  <div class="help-align-right"><a href="#top">▲画面トップへ</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+      <form-bean name="usr010Form" type="jp.groupsession.v2.usr.usr010.Usr010Form" />
+      <form-bean name="usr011Form" type="jp.groupsession.v2.usr.usr011.Usr011Form" />
+      <form-bean name="usr011knForm" type="jp.groupsession.v2.usr.usr011kn.Usr011knForm" />
+      <form-bean name="usr012Form" type="jp.groupsession.v2.usr.usr012.Usr012Form" />
+      <form-bean name="usr013Form" type="jp.groupsession.v2.usr.usr013.Usr013Form" />
+      <form-bean name="usr013knForm" type="jp.groupsession.v2.usr.usr013kn.Usr013knForm" />
+      <form-bean name="usr020Form" type="jp.groupsession.v2.usr.usr020.Usr020Form" />
+      <form-bean name="usr030Form" type="jp.groupsession.v2.usr.usr030.Usr030Form" />
+      <form-bean name="usr031Form" type="jp.groupsession.v2.usr.usr031.Usr031Form" />
+      <form-bean name="usr031knForm" type="jp.groupsession.v2.usr.usr031kn.Usr031knForm" />
+      <form-bean name="usr032Form" type="jp.groupsession.v2.usr.usr032.Usr032Form" />
+      <form-bean name="usr032knForm" type="jp.groupsession.v2.usr.usr032kn.Usr032knForm" />
+      <form-bean name="usr033Form" type="jp.groupsession.v2.usr.usr033.Usr033Form" />
+      <form-bean name="usr033knForm" type="jp.groupsession.v2.usr.usr033kn.Usr033knForm" />
+      <form-bean name="usr040Form" type="jp.groupsession.v2.usr.usr040.Usr040Form" />
+      <form-bean name="usr041Form" type="jp.groupsession.v2.usr.usr041.Usr041Form" />
+      <form-bean name="usr042Form" type="jp.groupsession.v2.usr.usr042.Usr042Form" />
+      <form-bean name="usr043Form" type="jp.groupsession.v2.usr.usr043.Usr043Form" />
+      <form-bean name="usr044Form" type="jp.groupsession.v2.usr.usr044.Usr044Form" />
+      <form-bean name="usr045Form" type="jp.groupsession.v2.usr.usr045.Usr045Form" />
+      <form-bean name="usr046Form" type="jp.groupsession.v2.usr.usr046.Usr046Form" />
+      <form-bean name="usr050Form" type="jp.groupsession.v2.usr.usr050.Usr050Form" />
+      <form-bean name="usr060Form" type="jp.groupsession.v2.usr.usr060.Usr060Form" />
+      <form-bean name="usr061Form" type="jp.groupsession.v2.usr.usr061.Usr061Form" />
+      <form-bean name="usr080Form" type="jp.groupsession.v2.usr.usr080.Usr080Form" />
+      <form-bean name="usr081Form" type="jp.groupsession.v2.usr.usr081.Usr081Form" />
+      <form-bean name="usr082Form" type="jp.groupsession.v2.usr.usr082.Usr082Form" />
+      <form-bean name="usr083Form" type="jp.groupsession.v2.usr.usr083.Usr083Form" />
+      <form-bean name="usr083knForm" type="jp.groupsession.v2.usr.usr083kn.Usr083knForm" />
+      <form-bean name="usr090Form" type="jp.groupsession.v2.usr.usr090.Usr090Form" />
+      <form-bean name="usr200Form" type="jp.groupsession.v2.usr.usr200.Usr200Form" />
+      <form-bean name="usr210Form" type="jp.groupsession.v2.usr.usr210.Usr210Form" />
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+    <global-forwards type="org.apache.struts.action.ActionForward">
+        <forward name="gf_groupList" path="/user/usr010.do" redirect="false"/>
+    </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+       <!-- グループマネージャー 一覧 -->
+       <action
+            name="usr010Form"
+            path="/user/usr010"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr010.Usr010Action">
+            <forward name="add" path="/user/usr011.do" />
+            <forward name="edit" path="/user/usr011.do" />
+            <forward name="userEdit" path="/user/usr030.do?CMD=DEFAULT" />
+            <forward name="back" path="/main/man002.do?CMD=DEFAULT" />
+            <forward name="uview" path="/user/usr012.do?CMD=DEFAULT" />
+            <forward name="import" path="/user/usr013.do" />
+            <forward name="expok" path="/user/usr010.do?grpCsvOut=1" />
+            <forward name="expcancel" path="/user/usr010.do?CMD=Usr010_Back" />
+       </action>
+
+       <!-- グループ追加・修正 -->
+       <action
+            name="usr011Form"
+            path="/user/usr011"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr011.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr011.Usr011Action">
+            <forward name="kakunin" path="/user/usr011kn.do" />
+            <forward name="back" path="/user/usr010.do?CMD=DEFAULT" />
+            <forward name="default" path="/user/usr011kn.do" />
+       </action>
+
+       <!-- グループ追加・修正 確認 -->
+       <action
+            name="usr011knForm"
+            path="/user/usr011kn"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr011kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr011kn.Usr011knAction">
+            <forward name="usr011_back" path="/user/usr011.do" />
+            <forward name="list" path="/user/usr010.do?CMD=DEFAULT" />
+       </action>
+
+       <!-- 所属ユーザ表示 -->
+       <action
+            name="usr012Form"
+            path="/user/usr012"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr012.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr012.Usr012Action">
+            <forward name="back" path="/user/usr010.do?CMD=DEFAULT" />
+       </action>
+
+       <!-- グループインポート -->
+       <action
+            name="usr013Form"
+            path="/user/usr013"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr013.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr013.Usr013Action">
+            <forward name="kakunin" path="/user/usr013kn.do" />
+            <forward name="back" path="/user/usr010.do?CMD=DEFAULT" />
+       </action>
+
+       <!-- グループインポート確認 -->
+       <action
+            name="usr013knForm"
+            path="/user/usr013kn"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr013kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr013kn.Usr013knAction">
+            <forward name="usr013_back" path="/user/usr013.do" />
+            <forward name="list" path="/user/usr010.do?CMD=DEFAULT" />
+       </action>
+
+       <!-- グループ一覧(ラジオタイプ) -->
+       <action
+            name="usr020Form"
+            path="/user/usr020"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr020.Usr020Action">
+       </action>
+
+       <!-- グループ一覧(チェックボックスタイプ) -->
+       <action
+            name="usr020Form"
+            path="/user/usr021"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr021.Usr021Action">
+       </action>
+
+       <!-- グループ一覧(グループ名クリック) -->
+       <action
+            name="usr020Form"
+            path="/user/usr022"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr022.Usr022Action">
+       </action>
+
+       <!-- ユーザーマネージャー 一覧 -->
+       <action
+            name="usr030Form"
+            path="/user/usr030"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr030.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr030.Usr030Action">
+            <forward name="back" path="/main/man002.do?CMD=DEFAULT" />
+            <forward name="groupEdit" path="/user/usr010.do?CMD=DEFAULT" />
+            <forward name="add" path="/user/usr031.do" />
+            <forward name="edit" path="/user/usr031.do" />
+            <forward name="del" path="/user/usr031kn.do?CMD=kakunin" />
+            <forward name="yuko" path="/user/usr031kn.do?CMD=kakunin" />
+            <forward name="muko" path="/user/usr031kn.do?CMD=kakunin" />
+            <forward name="csvDel" path="/user/usr033.do" />
+            <forward name="userImp" path="/user/usr032.do" />
+            <forward name="expok" path="/user/usr030.do?csvOut=1" />
+            <forward name="expcancel" path="/user/usr030.do?CMD=Usr032_Back" />
+       </action>
+
+       <!-- ユーザ追加・修正 -->
+       <action
+            name="usr031Form"
+            path="/user/usr031"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr031.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr031.Usr031Action">
+            <forward name="kakunin" path="/user/usr031kn.do" />
+            <forward name="back" path="/user/usr030.do" />
+            <forward name="kojn_settei" path="/main/man030.do" />
+            <forward name="main" path="/common/cmn001.do" />
+       </action>
+
+       <!-- ユーザ追加・修正(確認) -->
+       <action
+            name="usr031knForm"
+            path="/user/usr031kn"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr031kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr031kn.Usr031knAction">
+            <forward name="back" path="/user/usr031.do" />
+            <forward name="delBack" path="/user/usr030.do" />
+            <forward name="list" path="/user/usr030.do?CMD=DEFAULT" />
+            <forward name="kojn_settei" path="/main/man030.do" />
+            <forward name="main" path="/common/cmn001.do" />
+       </action>
+
+       <!-- ユーザインポート -->
+       <action
+            name="usr032Form"
+            path="/user/usr032"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr032.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr032.Usr032Action">
+            <forward name="kakunin" path="/user/usr032kn.do" />
+            <forward name="back" path="/user/usr030.do" />
+       </action>
+
+       <!-- ユーザインポート -->
+       <action
+            name="usr032knForm"
+            path="/user/usr032kn"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr032kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr032kn.Usr032knAction">
+            <forward name="back" path="/user/usr032.do" />
+            <forward name="comp" path="/user/usr030.do" />
+       </action>
+
+       <!-- ユーザ一括削除 -->
+       <action
+            name="usr033Form"
+            path="/user/usr033"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr033.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr033.Usr033Action">
+            <forward name="kakunin" path="/user/usr033kn.do" />
+            <forward name="back" path="/user/usr030.do" />
+       </action>
+
+       <!-- ユーザ一括削除確認 -->
+       <action
+            name="usr033knForm"
+            path="/user/usr033kn"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr033kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr033kn.Usr033knAction">
+            <forward name="back" path="/user/usr033.do" />
+            <forward name="comp" path="/user/usr030.do" />
+            <forward name="list" path="/user/usr030.do?CMD=DEFAULT" />
+       </action>
+
+       <!-- ユーザ情報検索 -->
+       <action
+            name="usr040Form"
+            path="/user/usr040"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr040.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr040.Usr040Action">
+            <forward name="psetting" path="/user/usr042.do" />
+            <forward name="asetting" path="/user/usr080.do" />
+            <forward name="month" path="/schedule/sch020.do" />
+            <forward name="labelEdit" path="/user/usr043.do" />
+
+       </action>
+
+       <!-- 表示設定 -->
+       <action
+            name="usr041Form"
+            path="/user/usr041"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr041.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr041.Usr041Action">
+            <forward name="back" path="/user/usr042.do" />
+
+       </action>
+
+       <!-- ユーザ情報個人設定メニュー -->
+       <action
+            name="usr042Form"
+            path="/user/usr042"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr042.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr042.Usr042Action">
+            <forward name="usr040" path="/user/usr040.do" />
+            <forward name="usr041" path="/user/usr041.do" />
+            <forward name="mainPriSetting" path="/main/man030.do" />
+       </action>
+
+       <!-- カテゴリ設定 -->
+       <action
+            name="usr043Form"
+            path="/user/usr043"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr043.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr043.Usr043Action">
+            <forward name="back" path="/user/usr040.do" />
+            <forward name="usr043edit" path="/user/usr044.do" />
+            <forward name="edit" path="/user/usr045.do" />
+            <forward name="add" path="/user/usr045.do" />
+       </action>
+
+       <!-- ラベル設定 -->
+       <action
+            name="usr044Form"
+            path="/user/usr044"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr044.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr044.Usr044Action">
+            <forward name="back" path="/user/usr043.do" />
+            <forward name="addLabel" path="/user/usr046.do" />
+            <forward name="labelEdit" path="/user/usr046.do" />
+       </action>
+
+       <!-- カテゴリ編集 -->
+       <action
+            name="usr045Form"
+            path="/user/usr045"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr045.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr045.Usr045Action">
+            <forward name="listback" path="/user/usr043.do" />
+            <forward name="usr045" path="/user/usr045.do" />
+       </action>
+
+       <!-- ラベル編集 -->
+       <action
+            name="usr046Form"
+            path="/user/usr046"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr046.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr046.Usr046Action">
+            <forward name="labelListback" path="/user/usr044.do" />
+            <forward name="usr044" path="/user/usr044.do" />
+            <forward name="usr046" path="/user/usr046.do" />
+       </action>
+
+       <!-- パスワード変更 -->
+       <action
+            name="usr050Form"
+            path="/user/usr050"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr050.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr050.Usr050Action">
+            <forward name="backToMenu" path="/main/man030.do" />
+            <forward name="backToTop" path="/main/man002.do" />
+            <forward name="backToLogin" path="/common/cmn001.do" />
+            <forward name="backToFrame" path="/common/cmn002.do" />
+
+            <forward name="redraw" path="/user/usr050.do" />
+       </action>
+
+       <!-- ワンタイムパスワード登録先アドレス設定 -->
+       <action
+            name="usr060Form"
+            path="/user/usr060"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr060.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr060.Usr060Action">
+            <forward name="frame" path="/common/cmn002.do" />
+            <forward name="pswdLimit" path="/user/usr050.do?CMD=pswdLimit" />
+            <forward name="pswdUpdate" path="/user/usr050.do?CMD=pswdUpdate" />
+            <forward name="kakutei" path="/user/usr060.do?CMD=usr060kakutei" />
+            <forward name="dsp" path="/user/usr060.do?" />
+            <forward name="backPconf" path="/main/man030.do" />
+            <forward name="backLogin" path="/common/cmn001.do" />
+       </action>
+
+       <!-- ワンタイムパスワード登録先アドレス設定（GS管理者） -->
+       <action
+            name="usr061Form"
+            path="/user/usr061"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr061.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr061.Usr061Action">
+            <forward name="kakutei" path="/user/usr061.do?CMD=usr061kakutei" />
+            <forward name="dsp" path="/user/usr061.do?" />
+            <forward name="back" path="/main/man002.do" />
+       </action>
+
+
+       <!-- ユーザ情報管理者設定メニュー -->
+       <action
+            name="usr080Form"
+            path="/user/usr080"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr080.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr080.Usr080Action">
+            <forward name="back" path="/user/usr040.do" />
+            <forward name="basic" path="/user/usr081.do" />
+            <forward name="defoSort" path="/user/usr082.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+            <forward name="labelConf" path="/user/usr083.do" />
+            <forward name="qrConf" path="/user/usr084.do" />
+       </action>
+       <!-- ユーザ情報管理者設定(基本設定) -->
+       <action
+            name="usr081Form"
+            path="/user/usr081"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr081.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr081.Usr081Action">
+            <forward name="back" path="/user/usr080.do" />
+            <forward name="kakunin" path="/user/usr081.do" />
+            <forward name="changeOk" path="/user/usr081.do?CMD=usr081commit" />
+            <forward name="ktool" path="/user/usr080.do" />
+            <forward name="changeCancel" path="/user/usr081.do" />
+       </action>
+
+       <!-- デフォルト表示順設定 -->
+       <action
+            name="usr082Form"
+            path="/user/usr082"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr082.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr082.Usr082Action">
+            <forward name="back" path="/user/usr080.do" />
+            <forward name="kakunin" path="/user/usr082.do" />
+            <forward name="changeOk" path="/user/usr082.do?CMD=usr082commit" />
+            <forward name="ktool" path="/user/usr080.do" />
+            <forward name="changeCancel" path="/user/usr082.do" />
+
+       </action>
+
+       <!-- 権限設定 -->
+       <action
+            name="usr083Form"
+            path="/user/usr083"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr083.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr083.Usr083Action">
+            <forward name="usr083back" path="/user/usr080.do" />
+            <forward name="usr083kakunin" path="/user/usr083kn.do" />
+
+       </action>
+
+       <!-- 権限設定確認 -->
+       <action
+            name="usr083knForm"
+            path="/user/usr083kn"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr083kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr083kn.Usr083knAction">
+            <forward name="kakutei" path="/user/usr083kn.do" />
+            <forward name="changeCancel" path="/user/usr083kn.do" />
+            <forward name="usr083knBack" path="/user/usr083.do" />
+            <forward name="usr080" path="/user/usr080.do" />
+       </action>
+
+       <!-- 固体識別番号 入力履歴 -->
+       <action
+            name="usr090Form"
+            path="/user/usr090"
+            scope="request"
+            input="/WEB-INF/plugin/user/jsp/usr090.jsp"
+            validate="false"
+            type="jp.groupsession.v2.usr.usr090.Usr090Action">
+       </action>
+
+       <!-- ラベル選択 -->
+       <action
+           name="usr200Form"
+           path="/user/usr200"
+           scope="request"
+           input="/WEB-INF/plugin/user/jsp/usr200.jsp"
+           validate="false"
+           type="jp.groupsession.v2.usr.usr200.Usr200Action">
+       </action>
+
+       <!-- ラベル選択(ユーザマネージャー) -->
+       <action
+           name="usr210Form"
+           path="/user/usr210"
+           scope="request"
+           input="/WEB-INF/plugin/user/jsp/usr210.jsp"
+           validate="false"
+           type="jp.groupsession.v2.usr.usr210.Usr210Action">
+       </action>
+
+        <!-- ユーザ数上限再読込 -->
+        <action
+            name="emptyForm"
+            path="/user/usr900"
+            input=""
+            validate="false"
+            scope="request"
+            type="jp.groupsession.v2.usr.usr900.Usr900Action">
+        </action>
+
+
+    </action-mappings>
+
+</struts-config>

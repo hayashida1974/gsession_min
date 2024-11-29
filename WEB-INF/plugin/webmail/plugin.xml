@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin>
+
+  <!-- プラグインID -->
+  <id>webmail</id>
+  <short-id>wml</short-id>
+
+  <!-- 名称  -->
+  <name>WEBメール</name>
+  <name-eng>WEB MAIL</name-eng>
+
+  <!-- 説明  -->
+  <description>
+WEBメールです。
+  </description>
+
+  <!-- リスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>batchjob</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlBatchListenerImpl</listener-class>
+  </listener>
+  <!-- リスナー名  -->
+  <listener>
+    <listener-name>gslistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlGsListenerImpl</listener-class>
+  </listener>
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>mainInfo</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlMainInfoMessageListenerImpl</listener-class>
+  </listener>
+  <!-- ユーザ・グループの追加・修正の際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>userlistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlUserGroupListenerImpl</listener-class>
+  </listener>
+  <!-- リスナー名  -->
+  <listener>
+    <listener-name>loginlogoutlistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlGsLoginLogoutListenerImpl</listener-class>
+  </listener>
+  <!-- 自動バックアップリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>backupBatchjob</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlBatchBackupListenerImpl</listener-class>
+  </listener>
+  <!-- 自動削除設定の際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>autoManualDeletelistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlIAutoManualDeleteListenerImpl</listener-class>
+  </listener>
+
+  <!-- データ使用量の操作時に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>useddatalistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.wml.listener.WmlUsedDetailListenerImpl</listener-class>
+  </listener>
+
+  <!-- バッチ処理 記述しない場合、Gs2Resources.properties BatchStatus=0:実行する の場合のみバッチ処理を実行する -->
+  <batch-info>
+    <!-- Gs2Resources.properties BatchStatus=2:制限して実行 の場合、バッチ処理の実行を行うか -->
+    <limitation>true</limitation>
+  </batch-info>
+
+  <server>
+    <!-- サーバサービス名  -->
+    <server-name>wmlPop3Server</server-name>
+    <!-- サーバクラス  -->
+    <server-class>jp.groupsession.v2.wml.pop3.Pop3Server</server-class>
+  </server>
+
+  <!-- トップメニュー トップメニューの情報を記述する 記述しない場合はメニューに表示しない  -->
+  <topmenu-info>
+    <!-- メニューへの表示/非表示 -->
+    <view>true</view>
+    <!-- メニューアイコンクリック時に遷移するURL -->
+    <url>../webmail/wml010.do</url>
+    <!-- メニューアイコンの表示順 未設定の場合は表示順が設定されているプラグインの次に表示する -->
+    <order>9</order>
+  </topmenu-info>
+
+  <!-- ヘルプ情報を設定する。 -->
+  <help-info>
+    <!-- メニューの表示/非表示 -->
+    <view>true</view>
+  </help-info>
+
+  <!-- メイン管理者設定画面に表示する情報を記述する  -->
+  <adminsetting-info>
+    <!-- メイン管理者設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 管理者設定メニューURL -->
+    <url>../webmail/wml020.do</url>
+    <!-- アイコン -->
+    <icon>../webmail/images/original/menu_icon_single.png</icon>
+    <iconClassic>../webmail/images/classic/menu_icon_single.gif</iconClassic>
+  </adminsetting-info>
+
+  <!-- メイン個人設定画面に表示する情報を記述する  -->
+  <privatesetting-info>
+    <!-- メイン個人設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 個人設定メニューURL -->
+    <url>../webmail/wml090.do</url>
+    <!-- アイコン -->
+    <icon>../webmail/images/original/menu_icon_single.png</icon>
+    <iconClassic>../webmail/images/classic/menu_icon_single.gif</iconClassic>
+  </privatesetting-info>
+    <!-- ログ出力を設定する。 -->
+  <log-info>
+    <!-- ログ出力 対象/非対象 -->
+    <output>true</output>
+  </log-info>
+</plugin>

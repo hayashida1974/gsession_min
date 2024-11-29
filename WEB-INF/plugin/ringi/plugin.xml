@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin>
+
+  <!-- プラグインID -->
+  <id>ringi</id>
+  <short-id>rng</short-id>
+
+  <!-- 名称  -->
+  <name>稟議</name>
+  <name-eng>Request for decision</name-eng>
+
+  <!-- 説明  -->
+  <description>
+稟議を電子データとして送信することができます。
+申請中の稟議がどこまで承認されたか確認することができます。
+申請経路とは別に、確認者を設定可能なので、申請が通ったら経理や総務で処理を行うといった業務の流れもスムーズに行えます。
+  </description>
+
+  <!-- バッチ処理の実行を行うリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>batchjob</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.rng.RingiBatchListenerImpl</listener-class>
+  </listener>
+
+  <!-- リスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>rnglistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.rng.RngListenerImpl</listener-class>
+  </listener>
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>mainInfo</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.rng.RngMainInfoMessage</listener-class>
+  </listener>
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>userlistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.rng.RngIUserGroupListenerImpl</listener-class>
+  </listener>
+  <!-- ショートメール通知設定の際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>smailSendSettinglistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.rng.RngISmlSendSettingListenerImpl</listener-class>
+  </listener>
+  <!-- 自動削除設定の際に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>autoManualDeletelistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.rng.RngIAutoManualDeleteListenerImpl</listener-class>
+  </listener>
+
+  <!-- データ使用量の操作時に呼び出されるリスナー  -->
+  <listener>
+    <!-- リスナー名  -->
+    <listener-name>useddatalistener</listener-name>
+    <!-- リスナー実装クラス  -->
+    <listener-class>jp.groupsession.v2.rng.RngUsedDetailListenerImpl</listener-class>
+  </listener>
+
+  <!-- トップメニュー トップメニューの情報を記述する 記述しない場合はメニューに表示しない  -->
+  <topmenu-info>
+    <!-- メニューへの表示/非表示 -->
+    <view>true</view>
+    <!-- メニューアイコンクリック時に遷移するURL -->
+    <url>../ringi/rng010.do</url>
+    <!-- メニューアイコンの表示順 未設定の場合は表示順が設定されているプラグインの次に表示する -->
+    <order>10</order>
+  </topmenu-info>
+
+
+  <!-- メイン画面表示 メイン画面に表示する情報を記述する -->
+  <mainscreen-info>
+    <!-- メイン画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- メイン画面へ表示する画面のID javascriptを使用したい場合はこの名前で作成する 未設定の場合は表示しない -->
+    <id>rngmain</id>
+    <!-- 表示位置の設定 左=1 右=2  未設定の場合は左へ表示する -->
+    <position>1</position>
+    <!-- 表示順の設定 未設定の場合は表示順が設定されているプラグインの下に表示する -->
+    <order>5</order>
+    <!-- ポートレット画面への表示/非表示 pluginPortletタグ未記入の場合は非表示 -->
+    <pluginPortlet>true</pluginPortlet>
+  </mainscreen-info>
+
+  <!-- ヘルプ情報を設定する。 -->
+  <help-info>
+    <!-- メニューの表示/非表示 -->
+    <view>true</view>
+  </help-info>
+
+  <!-- メイン管理者設定画面に表示する情報を記述する  -->
+  <adminsetting-info>
+    <!-- メイン管理者設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 管理者設定メニューURL -->
+    <url>../ringi/rng040.do</url>
+    <!-- アイコン -->
+    <icon>../ringi/images/original/menu_icon_single.png</icon>
+    <iconClassic>../ringi/images/classic/menu_icon_single.gif</iconClassic>
+  </adminsetting-info>
+
+  <!-- メイン個人設定画面に表示する情報を記述する  -->
+  <privatesetting-info>
+    <!-- メイン個人設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>true</view>
+    <!-- 個人設定メニューURL -->
+    <url>../ringi/rng080.do</url>
+    <!-- アイコン -->
+    <icon>../ringi/images/original/menu_icon_single.png</icon>
+    <iconClassic>../ringi/images/classic/menu_icon_single.gif</iconClassic>
+  </privatesetting-info>
+  <!-- ログ出力を設定する。 -->
+  <log-info>
+    <!-- ログ出力 対象/非対象 -->
+    <output>true</output>
+  </log-info>
+</plugin>

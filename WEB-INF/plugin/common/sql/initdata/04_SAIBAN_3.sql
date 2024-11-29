@@ -1,0 +1,23 @@
+ insert
+ into
+ CMN_SAIBAN(
+   SBN_SID,
+   SBN_SID_SUB,
+   SBN_NUMBER,
+   SBN_STRING,
+   SBN_AID,
+   SBN_ADATE,
+   SBN_EID,
+   SBN_EDATE
+ )
+ values
+ (
+  'file',
+  'money',
+  4,
+  'money',
+  0,
+  current_timestamp,
+  0,
+  current_timestamp
+);

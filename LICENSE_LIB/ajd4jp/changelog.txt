@@ -1,0 +1,11 @@
+変更箇所
+■ ajd4jp.LunisolarYear
+  [private static HashMap<Year, LunisolarYear> map]
+    ・HashMapからWeakHashMapに変更
+  
+  [get11(AJD ajd)]
+    ・sun > START 時に基準年を-1する処理について、指定日の月が12月の場合は-1しない仕様に変更
+
+■ ajd4jp.STCD
+  [private static HashMap<Year, HashMap<Integer, AJD>> start_day]
+    ・HashMapからWeakHashMapに変更

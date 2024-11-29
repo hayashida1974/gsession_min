@@ -1,0 +1,18 @@
+以下のメールに対するパスワードを通知します。
+
+
+パスワード：$PASSWD
+
+
+
+◆ 暗号元のメール情報
+
+Subject：$SUBJECT
+
+From：$FROM
+
+To：$TO
+
+Cc：$CC
+
+Date：$DATE

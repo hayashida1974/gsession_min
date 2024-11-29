@@ -1,0 +1,1 @@
+create index RNG_SINGI2 on RNG_SINGI(USR_SID);

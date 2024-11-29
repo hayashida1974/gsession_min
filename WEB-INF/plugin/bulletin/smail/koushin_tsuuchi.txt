@@ -1,0 +1,13 @@
+◎Group Session 掲示板更新通知
+
+┏━
+┃$TITLE
+┃　<$FNAME>　$UNAME  $DATE
+┗━
+URL:$URL
+
+添付:$FILES
+
+◆内容
+${BODY}
+

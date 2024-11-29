@@ -1,0 +1,1 @@
+create index RNG_FORMDATA1 on RNG_FORMDATA(RNG_SID);

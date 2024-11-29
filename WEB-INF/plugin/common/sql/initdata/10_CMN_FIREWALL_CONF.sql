@@ -1,0 +1,15 @@
+ insert
+ into
+ CMN_FIREWALL_CONF(
+   CFC_ALLOW_IP,
+   CFC_ALLOW_MBL,
+   CFC_ALLOW_MBL_PLUGIN,
+   CFC_ALLOW_ANP
+ )
+ values
+ (
+   '',
+   0,
+   0,
+   0
+ );

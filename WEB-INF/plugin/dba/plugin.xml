@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="Shift_jis" ?>
+
+<plugin>
+
+  <!-- プラグインID -->
+  <id>dba</id>
+
+  <!-- 名称  -->
+  <name>DBA</name>
+
+  <!-- 説明  -->
+  <description>
+GroupSessionで使用するデータベースをSQLの発行等によって直接メンテナンス可能にすること。
+  </description>
+
+  <!-- トップメニュー トップメニューの情報を記述する 記述しない場合はメニューに表示しない  -->
+  <topmenu-info>
+    <!-- メニューへの表示/非表示 -->
+    <view>true</view>
+    <!-- メニューアイコンクリック時に遷移するURL -->
+    <url>../dba/dba001.do</url>
+    <icon>../dba/images/original/menu_icon_single.png</icon>
+    <iconClassic>../dba/images/classic/menu_icon_single.gif</iconClassic>
+  </topmenu-info>
+
+  <!-- メイン画面表示 メイン画面に表示する情報を記述する -->
+  <mainscreen-info>
+    <!-- メイン画面への表示/非表示 未設定の場合は表示しない -->
+    <view>false</view>
+  </mainscreen-info>
+
+  <!-- ヘルプ情報を設定する。 -->
+  <help-info>
+    <!-- メニューの表示/非表示 -->
+    <view>false</view>
+  </help-info>
+
+  <!-- メイン管理者設定画面に表示する情報を記述する  -->
+  <adminsetting-info>
+    <!-- メイン個人設定画面への表示/非表示 未設定の場合は表示しない -->
+    <view>false</view>
+    <!-- 個人設定メニューURL -->
+    <url></url>
+    <!-- アイコン -->
+    <icon>../dba/images/original/menu_icon_single.png</icon>
+    <iconClassic>../dba/images/classic/menu_icon_single.gif</iconClassic>
+  </adminsetting-info>
+
+</plugin>

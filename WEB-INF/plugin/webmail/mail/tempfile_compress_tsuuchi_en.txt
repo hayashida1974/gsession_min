@@ -1,0 +1,18 @@
+I will inform the password for the e-mail below.
+
+
+Password：$PASSWD
+
+
+
+◆ Mail information of the original encryption
+
+Subject：$SUBJECT
+
+From：$FROM
+
+To：$TO
+
+Cc：$CC
+
+Date：$DATE

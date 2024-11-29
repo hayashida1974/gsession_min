@@ -1,0 +1,46 @@
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+
+<html:hidden property="wml010viewDirectory" />
+<html:hidden property="wml010viewDirectoryType" />
+<html:hidden property="wml010viewMailNum" />
+<html:hidden property="wml010selectPage" />
+<html:hidden property="wml010pageTop" />
+<html:hidden property="wml010pageBottom" />
+<html:hidden property="wml010sortKey" />
+<html:hidden property="wml010order" />
+<html:hidden property="wml010searchKeywordNml" />
+<html:hidden property="wml010searchFlg" />
+<html:hidden property="wml010searchFrom" />
+<html:hidden property="wml010searchTo" />
+<html:hidden property="wml010searchToKbnTo" />
+<html:hidden property="wml010searchToKbnCc" />
+<html:hidden property="wml010searchToKbnBcc" />
+<html:hidden property="wml010searchDateType" />
+<html:hidden property="wml010searchDateYearFr" />
+<html:hidden property="wml010searchDateMonthFr" />
+<html:hidden property="wml010searchDateDayFr" />
+<html:hidden property="wml010searchDateYearTo" />
+<html:hidden property="wml010searchDateMonthTo" />
+<html:hidden property="wml010searchDateDayTo" />
+<html:hidden property="wml010searchTempFile" />
+<html:hidden property="wml010searchKeywordKbn" />
+<html:hidden property="wml010searchKeyword" />
+<html:hidden property="wml010searchReadKbn" />
+<html:hidden property="wml010svSearchKeywordNml" />
+<html:hidden property="wml010svSearchFrom" />
+<html:hidden property="wml010svSearchTo" />
+<html:hidden property="wml010svSearchToKbnTo" />
+<html:hidden property="wml010svSearchToKbnCc" />
+<html:hidden property="wml010svSearchToKbnBcc" />
+<html:hidden property="wml010svSearchDateType" />
+<html:hidden property="wml010svSearchDateYearFr" />
+<html:hidden property="wml010svSearchDateMonthFr" />
+<html:hidden property="wml010svSearchDateDayFr" />
+<html:hidden property="wml010svSearchDateYearTo" />
+<html:hidden property="wml010svSearchDateMonthTo" />
+<html:hidden property="wml010svSearchDateDayTo" />
+<html:hidden property="wml010svSearchTempFile" />
+<html:hidden property="wml010svSearchKeywordKbn" />
+<html:hidden property="wml010svSearchKeyword" />
+<html:hidden property="wml010svSearchReadKbn" />

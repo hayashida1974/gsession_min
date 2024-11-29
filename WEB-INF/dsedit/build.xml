@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=================================================================================
+  GroupSession dataSource.xml Edit
+  create    2007/04/10  Japan Total System Co.,Ltd.
+  create    2011/04/10  Japan Total System Co.,Ltd.
+  create    2013/08/05  Japan Total System Co.,Ltd.
+=================================================================================
+-->
+
+<project name="GroupSession dataSource.xml Edit" default="build" basedir=".">
+<!--
+=================================================================================
+Properties: 変数の定義
+=================================================================================
+ -->
+
+<!-- ディレクトリ名の定義 -->
+<property  name="SRC.DIR"      value="./src" />
+<property  name="DSEDIT.CLS.DIR" value="./classes" />
+
+<!-- Compile Options -->
+<property  name="BLD.TARGET"   value="11" />
+<property  name="DEBUG"        value="yes" />
+<property  name="DEPRECATION"  value="true" />
+<property  name="SRC.ENC"      value="UTF-8" />
+
+<!-- ClassPath -->
+<path id="app_classpath">
+
+  <!-- OSのクラスパス -->
+  <pathelement path="${classpath}" />
+
+  <!-- LIBディレクトリ -->
+  <!-- プラグインのみで使用するlib -->
+  <!--fileset dir="./lib">
+    <include name="**/*.jar"/>
+    <include name="**/*.zip"/>
+  </fileset-->
+  <!-- アプリケーション共通lib -->
+  <fileset dir="../lib">
+    <include name="**/*.jar"/>
+    <include name="**/*.zip"/>
+  </fileset>
+  <!-- コンバート用Libを使用 -->
+  <!--fileset dir="../convert/v1.1.7tov2.0.0/lib">
+    <include name="**/*.jar"/>
+    <include name="**/*.zip"/>
+  </fileset-->
+  <!-- アプリケーション 共通クラス -->
+  <pathelement location="../classes" />
+</path>
+
+<!--
+=================================================================================
+BUILD: 初期化
+=================================================================================
+ -->
+<target name="init"
+        description="init"
+  >
+  <tstamp>
+    <format property="YMDHMS"
+            pattern="yyyy.MM.dd hh:mm:ss"
+    />
+  </tstamp>
+  <echo message="Project Name  = ${ant.project.name}" />
+  <echo message="Project Root  = ${basedir}" />
+  <echo message="JDK Version   = ${ant.java.version}" />
+  <echo message="Building Time = ${YMDHMS}" />
+  <echo message="CLASSPATH = classpath" />
+  <echo message="" />
+
+</target>
+
+<!--
+=================================================================================
+BUILD: Classファイルの作成(コンパイル)
+=================================================================================
+ -->
+
+<target name="build">
+  <antcall target="init" />
+  <mkdir dir="${DSEDIT.CLS.DIR}" />
+
+  <javac
+    classpathref = "app_classpath"
+    destdir      = "${DSEDIT.CLS.DIR}"
+    target       = "${BLD.TARGET}"
+    source       = "${BLD.TARGET}"
+    debug        = "${DEBUG}"
+    deprecation  = "${DEPRECATION}"
+    encoding     = "${SRC.ENC}">
+      <src path="${SRC.DIR}" />
+    <compilerarg value="-Xlint:unchecked" />
+    <include name="**/*.java"/>
+  </javac>
+
+</target>
+
+<!--
+=================================================================================
+CLEAN:*.*~ファイルとbldディレクトリを削除します。
+        defaultexcludes="no"にしなければ『~』は削除されない。
+=================================================================================
+ -->
+<target name="clean">
+  <delete dir="${DSEDIT.CLS.DIR}" />
+</target>
+
+</project>

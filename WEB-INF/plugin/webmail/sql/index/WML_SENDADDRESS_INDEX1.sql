@@ -1,0 +1,4 @@
+ create index
+   WML_SENDADDRESS_INDEX1
+ on
+   WML_SENDADDRESS(WAC_SID,WSA_TYPE);

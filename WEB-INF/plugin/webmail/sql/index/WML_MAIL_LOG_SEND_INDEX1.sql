@@ -1,0 +1,4 @@
+ create index
+   WML_MAIL_LOG_SEND_INDEX1
+ on
+   WML_MAIL_LOG_SEND(WAC_SID);

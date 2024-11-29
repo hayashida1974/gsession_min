@@ -1,0 +1,4 @@
+ create index
+   WML_HEADER_DATA_INDEX1
+ on
+   WML_HEADER_DATA(WAC_SID);

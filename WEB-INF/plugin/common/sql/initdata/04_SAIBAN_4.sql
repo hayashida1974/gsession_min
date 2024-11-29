@@ -1,0 +1,23 @@
+ insert
+ into
+ CMN_SAIBAN(
+   SBN_SID,
+   SBN_SID_SUB,
+   SBN_NUMBER,
+   SBN_STRING,
+   SBN_AID,
+   SBN_ADATE,
+   SBN_EID,
+   SBN_EDATE
+ )
+ values
+ (
+  'chat',
+  'stamp',
+  21,
+  'stamp',
+  0,
+  current_timestamp,
+  0,
+  current_timestamp
+);

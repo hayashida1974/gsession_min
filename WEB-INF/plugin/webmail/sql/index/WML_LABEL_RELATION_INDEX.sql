@@ -1,0 +1,4 @@
+ create index
+   WML_LABEL_RELATION_INDEX
+ on
+   WML_LABEL_RELATION(WAC_SID,WLB_SID);

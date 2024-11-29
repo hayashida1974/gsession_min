@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+      <form-bean name="wml010Form" type="jp.groupsession.v2.wml.wml010.Wml010Form" />
+      <form-bean name="wml011Form" type="jp.groupsession.v2.wml.wml011.Wml011Form" />
+      <form-bean name="wml012Form" type="jp.groupsession.v2.wml.wml012.Wml012Form" />
+      <form-bean name="wml020Form" type="jp.groupsession.v2.wml.wml020.Wml020Form" />
+      <form-bean name="wml030Form" type="jp.groupsession.v2.wml.wml030.Wml030Form" />
+      <form-bean name="wml040Form" type="jp.groupsession.v2.wml.wml040.Wml040Form" />
+      <form-bean name="wml040knForm" type="jp.groupsession.v2.wml.wml040kn.Wml040knForm" />
+      <form-bean name="wml041Form" type="jp.groupsession.v2.wml.wml041.Wml041Form" />
+      <form-bean name="wml050Form" type="jp.groupsession.v2.wml.wml050.Wml050Form" />
+      <form-bean name="wml050knForm" type="jp.groupsession.v2.wml.wml050kn.Wml050knForm" />
+      <form-bean name="wml060Form" type="jp.groupsession.v2.wml.wml060.Wml060Form" />
+      <form-bean name="wml060knForm" type="jp.groupsession.v2.wml.wml060kn.Wml060knForm" />
+      <form-bean name="wml070Form" type="jp.groupsession.v2.wml.wml070.Wml070Form" />
+      <form-bean name="wml080Form" type="jp.groupsession.v2.wml.wml080.Wml080Form" />
+      <form-bean name="wml090Form" type="jp.groupsession.v2.wml.wml090.Wml090Form" />
+      <form-bean name="wml100Form" type="jp.groupsession.v2.wml.wml100.Wml100Form" />
+      <form-bean name="wml110Form" type="jp.groupsession.v2.wml.wml110.Wml110Form" />
+      <form-bean name="wml120Form" type="jp.groupsession.v2.wml.wml120.Wml120Form" />
+      <form-bean name="wml120knForm" type="jp.groupsession.v2.wml.wml120kn.Wml120knForm" />
+      <form-bean name="wml130Form" type="jp.groupsession.v2.wml.wml130.Wml130Form" />
+      <form-bean name="wml140Form" type="jp.groupsession.v2.wml.wml140.Wml140Form" />
+      <form-bean name="wml140knForm" type="jp.groupsession.v2.wml.wml140kn.Wml140knForm" />
+      <form-bean name="wml150Form" type="jp.groupsession.v2.wml.wml150.Wml150Form" />
+      <form-bean name="wml150knForm" type="jp.groupsession.v2.wml.wml150kn.Wml150knForm" />
+      <form-bean name="wml160Form" type="jp.groupsession.v2.wml.wml160.Wml160Form" />
+      <form-bean name="wml160knForm" type="jp.groupsession.v2.wml.wml160kn.Wml160knForm" />
+      <form-bean name="wml170Form" type="jp.groupsession.v2.wml.wml170.Wml170Form" />
+      <form-bean name="wml170knForm" type="jp.groupsession.v2.wml.wml170kn.Wml170knForm" />
+      <form-bean name="wml180Form" type="jp.groupsession.v2.wml.wml180.Wml180Form" />
+      <form-bean name="wml180knForm" type="jp.groupsession.v2.wml.wml180kn.Wml180knForm" />
+      <form-bean name="wml190Form" type="jp.groupsession.v2.wml.wml190.Wml190Form" />
+      <form-bean name="wml190knForm" type="jp.groupsession.v2.wml.wml190kn.Wml190knForm" />
+      <form-bean name="wml200Form" type="jp.groupsession.v2.wml.wml200.Wml200Form" />
+      <form-bean name="wml210Form" type="jp.groupsession.v2.wml.wml210.Wml210Form" />
+      <form-bean name="wml210knForm" type="jp.groupsession.v2.wml.wml210kn.Wml210knForm" />
+      <form-bean name="wml220Form" type="jp.groupsession.v2.wml.wml220.Wml220Form" />
+      <form-bean name="wml230Form" type="jp.groupsession.v2.wml.wml230.Wml230Form" />
+      <form-bean name="wml230knForm" type="jp.groupsession.v2.wml.wml230kn.Wml230knForm" />
+      <form-bean name="wml240Form" type="jp.groupsession.v2.wml.wml240.Wml240Form" />
+      <form-bean name="wml250Form" type="jp.groupsession.v2.wml.wml250.Wml250Form" />
+      <form-bean name="wml250knForm" type="jp.groupsession.v2.wml.wml250kn.Wml250knForm" />
+      <form-bean name="wml260Form" type="jp.groupsession.v2.wml.wml260.Wml260Form" />
+      <form-bean name="wml260knForm" type="jp.groupsession.v2.wml.wml260kn.Wml260knForm" />
+      <form-bean name="wml270Form" type="jp.groupsession.v2.wml.wml270.Wml270Form" />
+      <form-bean name="wml280Form" type="jp.groupsession.v2.wml.wml280.Wml280Form" />
+      <form-bean name="wml280knForm" type="jp.groupsession.v2.wml.wml280kn.Wml280knForm" />
+      <form-bean name="wml290Form" type="jp.groupsession.v2.wml.wml290.Wml290Form" />
+      <form-bean name="wml300Form" type="jp.groupsession.v2.wml.wml300.Wml300Form" />
+      <form-bean name="wml320Form" type="jp.groupsession.v2.wml.wml320.Wml320Form" />
+      <form-bean name="wml320knForm" type="jp.groupsession.v2.wml.wml320kn.Wml320knForm" />
+      <!-- *** add(s) システムプロステージ *** -->
+      <form-bean name="wml1010Form" type="jp.groupsession.v2.wml.syspro.wml1010.Wml1010Form" />
+      <form-bean name="wml1010knForm" type="jp.groupsession.v2.wml.syspro.wml1010kn.Wml1010knForm" />
+      <!-- *** add(e) システムプロステージ *** -->
+
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+    <global-forwards type="org.apache.struts.action.ActionForward">
+        <forward name="mailList" path="/webmail/wml010.do" />
+        <forward name="admTool" path="/webmail/wml020.do" />
+        <forward name="accountManager" path="/webmail/wml030.do" />
+        <forward name="confAccount" path="/webmail/wml040.do" />
+        <forward name="psnTool" path="/webmail/wml090.do" />
+        <forward name="userAccountList" path="/webmail/wml100.do" />
+        <forward name="labelList" path="/webmail/wml110.do" />
+        <forward name="filterList" path="/webmail/wml130.do" />
+        <forward name="editAccount" path="/webmail/wml190.do" />
+        <forward name="labelConf" path="/webmail/wml200.do" />
+        <forward name="filterConf" path="/webmail/wml220.do" />
+        <forward name="mailTemplateConf" path="/webmail/wml240.do" />
+        <forward name="confSendList" path="/webmail/wml270.do" />
+    </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+       <!-- WEBメール メール一覧 -->
+       <action
+            name="wml010Form"
+            path="/webmail/wml010"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml010.Wml010Action">
+       </action>
+
+       <!-- WEBメール メールヘッダ -->
+       <action
+            name="wml011Form"
+            path="/webmail/wml011"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml011.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml011.Wml011Action">
+       </action>
+
+       <!-- WEBメール 送信メール確認 -->
+       <action
+            name="wml012Form"
+            path="/webmail/wml012"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml012.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml012.Wml012Action">
+       </action>
+
+       <!-- WEBメール 管理者設定 -->
+       <action
+            name="wml020Form"
+            path="/webmail/wml020"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml020.Wml020Action">
+
+            <forward name="wmlLogCount" path="/webmail/wml300.do" />
+            <forward name="autoDelete" path="/webmail/wml050.do" />
+            <forward name="manualDelete" path="/webmail/wml060.do" />
+            <forward name="mailLog" path="/webmail/wml070.do" />
+            <forward name="confAccount" path="/webmail/wml150.do" />
+            <forward name="autoDeleteHistory" path="/webmail/wml170.do" />
+            <forward name="manualDeleteHistory" path="/webmail/wml180.do" />
+            <forward name="timesentManager" path="/webmail/wml260.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+       </action>
+
+       <!-- アカウントマネージャー -->
+       <action
+            name="wml030Form"
+            path="/webmail/wml030"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml030.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml030.Wml030Action">
+
+            <forward name="acntImport" path="/webmail/wml160.do" />
+            <forward name="mine" path="/webmail/wml030.do" />
+
+            <forward name="confLabel" path="/webmail/wml200.do" />
+            <forward name="confFilter" path="/webmail/wml220.do" />
+       </action>
+
+       <!-- アカウント登録 -->
+       <action
+            name="wml040Form"
+            path="/webmail/wml040"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml040.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml040.Wml040Action">
+
+            <forward name="mine" path="/webmail/wml040.do" />
+            <forward name="delete" path="/webmail/wml030.do" />
+            <forward name="confirm" path="/webmail/wml040kn.do" />
+       </action>
+
+       <!-- アカウント登録確認 -->
+       <action
+            name="wml040knForm"
+            path="/webmail/wml040kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml040kn.Wml040knAction">
+       </action>
+
+       <!-- アカウント 署名登録 -->
+       <action
+            name="wml041Form"
+            path="/webmail/wml041"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml041.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml041.Wml041Action">
+
+       </action>
+
+       <!-- WEBメール 自動削除設定 -->
+       <action
+            name="wml050Form"
+            path="/webmail/wml050"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml050.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml050.Wml050Action">
+
+            <forward name="confirm" path="/webmail/wml050kn.do" />
+       </action>
+
+       <!-- WEBメール 自動削除設定確認 -->
+       <action
+            name="wml050knForm"
+            path="/webmail/wml050kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml050kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml050kn.Wml050knAction">
+
+            <forward name="backInput" path="/webmail/wml050.do" />
+       </action>
+
+       <!-- WEBメール 手動削除 -->
+       <action
+            name="wml060Form"
+            path="/webmail/wml060"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml060.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml060.Wml060Action">
+
+            <forward name="confirm" path="/webmail/wml060kn.do" />
+       </action>
+
+       <!-- WEBメール 手動削除確認 -->
+       <action
+            name="wml060knForm"
+            path="/webmail/wml060kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml060kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml060kn.Wml060knAction">
+
+            <forward name="backInput" path="/webmail/wml060.do" />
+       </action>
+
+       <!-- 送信ログ削除 -->
+       <action
+            name="wml070Form"
+            path="/webmail/wml070"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml070.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml070.Wml070Action">
+       </action>
+
+       <!-- メール詳細(ポップアップ) -->
+       <action
+            name="wml080Form"
+            path="/webmail/wml080"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml080.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml080.Wml080Action">
+       </action>
+
+       <!-- WEBメール 個人設定 -->
+       <action
+            name="wml090Form"
+            path="/webmail/wml090"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml090.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml090.Wml090Action">
+
+            <forward name="labelList" path="/webmail/wml110.do" />
+            <forward name="filterList" path="/webmail/wml130.do" />
+            <forward name="mainPriSetting" path="/main/man030.do" />
+            <forward name="deleteMailList" path="/webmail/wml320.do" />
+            <!-- *** add(e) システムプロステージ *** -->
+            <forward name="importEmlFiles" path="/webmail/wml1010.do" />
+            <!-- *** add(e) システムプロステージ *** -->
+       </action>
+
+       <!-- アカウント管理 -->
+       <action
+            name="wml100Form"
+            path="/webmail/wml100"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml100.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml100.Wml100Action">
+            <forward name="confAccount" path="/webmail/wml040.do" />
+            <forward name="mailList" path="/webmail/wml010.do?CMD=mailList" />
+            <forward name="editAccount" path="/webmail/wml190.do" />
+       </action>
+
+       <!-- ラベル管理 -->
+       <action
+            name="wml110Form"
+            path="/webmail/wml110"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml110.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml110.Wml110Action">
+
+            <forward name="mine" path="/webmail/wml110.do" />
+            <forward name="confLabel" path="/webmail/wml120.do" />
+       </action>
+
+       <!-- ラベル登録 -->
+       <action
+            name="wml120Form"
+            path="/webmail/wml120"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml120.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml120.Wml120Action">
+
+            <forward name="confirm" path="/webmail/wml120kn.do" />
+       </action>
+
+       <!-- ラベル登録確認 -->
+       <action
+            name="wml120knForm"
+            path="/webmail/wml120kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml120kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml120kn.Wml120knAction">
+
+            <forward name="backInput" path="/webmail/wml120.do" />
+       </action>
+
+       <!-- フィルター設定 -->
+       <action
+            name="wml130Form"
+            path="/webmail/wml130"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml130.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml130.Wml130Action">
+
+            <forward name="mine" path="/webmail/wml130.do" />
+            <forward name="confFilter" path="/webmail/wml140.do" />
+       </action>
+
+       <!-- フィルター登録 -->
+       <action
+            name="wml140Form"
+            path="/webmail/wml140"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml140.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml140.Wml140Action">
+
+            <forward name="confirm" path="/webmail/wml140kn.do" />
+       </action>
+
+       <!-- フィルター登録確認 -->
+       <action
+            name="wml140knForm"
+            path="/webmail/wml140kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml140kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml140kn.Wml140knAction">
+
+            <forward name="backInput" path="/webmail/wml140.do" />
+       </action>
+
+       <!-- アカウント設定 -->
+       <action
+            name="wml150Form"
+            path="/webmail/wml150"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml150.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml150.Wml150Action">
+
+            <forward name="confirm" path="/webmail/wml150kn.do" />
+       </action>
+
+       <!-- アカウント設定確認 -->
+       <action
+            name="wml150knForm"
+            path="/webmail/wml150kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml150kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml150kn.Wml150knAction">
+
+            <forward name="backInput" path="/webmail/wml150.do" />
+       </action>
+
+       <!-- アカウントインポート -->
+       <action
+            name="wml160Form"
+            path="/webmail/wml160"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml160.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml160.Wml160Action">
+
+            <forward name="importAccountConfirm" path="/webmail/wml160kn.do" />
+            <forward name="beforePage" path="/webmail/wml030.do" />
+       </action>
+
+       <!-- アカウントインポート確認 -->
+       <action
+            name="wml160knForm"
+            path="/webmail/wml160kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml160kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml160kn.Wml160knAction">
+
+            <forward name="backInput" path="/webmail/wml160.do" />
+       </action>
+
+       <!-- 送受信ログ 自動削除設定 -->
+       <action
+            name="wml170Form"
+            path="/webmail/wml170"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml170.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml170.Wml170Action">
+
+            <forward name="confirm" path="/webmail/wml170kn.do" />
+       </action>
+
+       <!-- 送受信ログ 自動削除設定確認 -->
+       <action
+            name="wml170knForm"
+            path="/webmail/wml170kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml170kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml170kn.Wml170knAction">
+
+            <forward name="backInput" path="/webmail/wml170.do" />
+       </action>
+
+       <!-- 送受信ログ 手動削除 -->
+       <action
+            name="wml180Form"
+            path="/webmail/wml180"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml180.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml180.Wml180Action">
+
+            <forward name="confirm" path="/webmail/wml180kn.do" />
+       </action>
+
+       <!-- 送受信ログ 手動削除確認 -->
+       <action
+            name="wml180knForm"
+            path="/webmail/wml180kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml180kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml180kn.Wml180knAction">
+
+            <forward name="backInput" path="/webmail/wml180.do" />
+       </action>
+
+       <!-- アカウント編集 -->
+       <action
+            name="wml190Form"
+            path="/webmail/wml190"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml190.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml190.Wml190Action">
+
+            <forward name="mine" path="/webmail/wml190.do" />
+            <forward name="confirm" path="/webmail/wml190kn.do" />
+       </action>
+
+       <!-- アカウント編集 -->
+       <action
+            name="wml190knForm"
+            path="/webmail/wml190kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml190kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml190kn.Wml190knAction">
+       </action>
+
+       <!-- 管理者設定 ラベル管理 -->
+       <action
+            name="wml200Form"
+            path="/webmail/wml200"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml200.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml200.Wml200Action">
+
+            <forward name="mine" path="/webmail/wml200.do" />
+            <forward name="confLabel" path="/webmail/wml210.do" />
+       </action>
+
+       <!-- 管理者設定 ラベル登録 -->
+       <action
+            name="wml210Form"
+            path="/webmail/wml210"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml210.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml210.Wml210Action">
+
+            <forward name="confirm" path="/webmail/wml210kn.do" />
+       </action>
+
+       <!-- 管理者設定 ラベル登録確認 -->
+       <action
+            name="wml210knForm"
+            path="/webmail/wml210kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml210kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml210kn.Wml210knAction">
+
+            <forward name="backInput" path="/webmail/wml210.do" />
+       </action>
+
+       <!-- 管理者設定 フィルター管理 -->
+       <action
+            name="wml220Form"
+            path="/webmail/wml220"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml220.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml220.Wml220Action">
+
+            <forward name="mine" path="/webmail/wml220.do" />
+            <forward name="confFilter" path="/webmail/wml230.do" />
+       </action>
+
+       <!-- 管理者設定 フィルター登録 -->
+       <action
+            name="wml230Form"
+            path="/webmail/wml230"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml230.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml230.Wml230Action">
+
+            <forward name="confirm" path="/webmail/wml230kn.do" />
+       </action>
+
+       <!-- 管理者設定 フィルター登録確認 -->
+       <action
+            name="wml230knForm"
+            path="/webmail/wml230kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml230kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml230kn.Wml230knAction">
+
+            <forward name="backInput" path="/webmail/wml230.do" />
+       </action>
+
+       <!-- メールテンプレート管理 -->
+       <action
+            name="wml240Form"
+            path="/webmail/wml240"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml240.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml240.Wml240Action">
+
+            <forward name="mine" path="/webmail/wml240.do" />
+            <forward name="confTemplate" path="/webmail/wml250.do" />
+       </action>
+
+       <!-- メールテンプレート登録 -->
+       <action
+            name="wml250Form"
+            path="/webmail/wml250"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml250.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml250.Wml250Action">
+
+            <forward name="confirm" path="/webmail/wml250kn.do" />
+       </action>
+
+       <!-- メールテンプレート登録確認 -->
+       <action
+            name="wml250knForm"
+            path="/webmail/wml250kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml250kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml250kn.Wml250knAction">
+
+            <forward name="backInput" path="/webmail/wml250.do" />
+       </action>
+
+       <!-- 送信予定メール管理 -->
+       <action
+            name="wml260Form"
+            path="/webmail/wml260"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml260.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml260.Wml260Action">
+
+            <forward name="confirm" path="/webmail/wml260kn.do" />
+       </action>
+
+       <!-- 送信予定メール管理確認 -->
+       <action
+            name="wml260knForm"
+            path="/webmail/wml260kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml260kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml260kn.Wml260knAction">
+
+            <forward name="backList" path="/webmail/wml260.do" />
+       </action>
+
+       <!-- 送信先リスト管理 -->
+       <action
+            name="wml270Form"
+            path="/webmail/wml270"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml270.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml270.Wml270Action">
+
+            <forward name="mine" path="/webmail/wml270.do" />
+            <forward name="confDestList" path="/webmail/wml280.do" />
+            <forward name="viewDestList" path="/webmail/wml280kn.do" />
+       </action>
+
+       <!-- 送信先リスト登録 -->
+       <action
+            name="wml280Form"
+            path="/webmail/wml280"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml280.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml280.Wml280Action">
+
+            <forward name="backDestList" path="/webmail/wml270.do" />
+            <forward name="mine" path="/webmail/wml280.do" />
+            <forward name="confirm" path="/webmail/wml280kn.do" />
+       </action>
+
+       <!-- 送信先リスト登録確認 -->
+       <action
+            name="wml280knForm"
+            path="/webmail/wml280kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml280kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml280kn.Wml280knAction">
+
+            <forward name="backInput" path="/webmail/wml280.do" />
+            <forward name="backDestList" path="/webmail/wml270.do" />
+       </action>
+
+       <!-- 送信先リスト選択 -->
+       <action
+            name="wml290Form"
+            path="/webmail/wml290"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml290.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml290.Wml290Action">
+       </action>
+
+       <!-- 管理者設定 統計情報 -->
+       <action
+            name="wml300Form"
+            path="/webmail/wml300"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml300.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml300.Wml300Action">
+            <forward name="backToMenu" path="/webmail/wml020.do" />
+
+            <forward name="adminCircular" path="/circular/cir210.do" />
+            <forward name="adminFile" path="/file/fil200.do" />
+            <forward name="adminSmail" path="/smail/sml100.do" />
+            <forward name="adminBulletin" path="/bulletin/bbs110.do" />
+            <forward name="adminChat" path="/chat/cht020.do" />
+            <forward name="adminMain" path="/main/man002.do" />
+
+
+            <forward name="statsCircular" path="/circular/cir210.do" />
+            <forward name="statsFile" path="/file/fil270.do" />
+            <forward name="statsSmail" path="/smail/sml370.do" />
+            <forward name="statsBulletin" path="/bulletin/bbs180.do" />
+            <forward name="statsChat" path="/chat/cht070.do" />
+            <forward name="statsMain" path="/main/man390.do" />
+       </action>
+
+       <!-- メール情報一括削除 -->
+       <action
+            name="wml320Form"
+            path="/webmail/wml320"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml320.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml320.Wml320Action">
+
+            <forward name="confirm" path="/webmail/wml320kn.do" />
+       </action>
+
+       <!-- メール情報一括削除確認 -->
+       <action
+            name="wml320knForm"
+            path="/webmail/wml320kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml320kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml320kn.Wml320knAction">
+
+            <forward name="backInput" path="/webmail/wml320.do" />
+       </action>
+
+       <!-- WEBメール設定ファイル再読み込み -->
+       <action
+            name="emptyForm"
+            path="/webmail/wml900"
+            scope="request"
+            validate="false"
+            type="jp.groupsession.v2.wml.wml900.Wml900Action">
+       </action>
+
+       <!-- *** add(s) システムプロステージ *** -->
+       <!-- メールインポート -->
+       <action
+            name="wml1010Form"
+            path="/webmail/wml1010"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml1010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.syspro.wml1010.Wml1010Action">
+
+            <forward name="kakunin" path="/webmail/wml1010kn.do" />
+       </action>
+
+       <!-- メールインポート確認 -->
+       <action
+            name="wml1010knForm"
+            path="/webmail/wml1010kn"
+            scope="request"
+            input="/WEB-INF/plugin/webmail/jsp/wml1010kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.wml.syspro.wml1010kn.Wml1010knAction">
+
+            <forward name="backInput" path="/webmail/wml1010.do" />
+       </action>
+       <!-- *** add(e) システムプロステージ *** -->
+
+    </action-mappings>
+</struts-config>

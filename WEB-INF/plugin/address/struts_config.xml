@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+        <form-bean name="adr010Form" type="jp.groupsession.v2.adr.adr010.Adr010Form" />
+        <form-bean name="adr020Form" type="jp.groupsession.v2.adr.adr020.Adr020Form" />
+        <form-bean name="adr020knForm" type="jp.groupsession.v2.adr.adr020kn.Adr020knForm" />
+        <form-bean name="adr030Form" type="jp.groupsession.v2.adr.adr030.Adr030Form" />
+        <form-bean name="adr040Form" type="jp.groupsession.v2.adr.adr040.Adr040Form" />
+        <form-bean name="adr040knForm" type="jp.groupsession.v2.adr.adr040kn.Adr040knForm" />
+        <form-bean name="adr050Form" type="jp.groupsession.v2.adr.adr050.Adr050Form" />
+        <form-bean name="adr060Form" type="jp.groupsession.v2.adr.adr060.Adr060Form" />
+        <form-bean name="adr070Form" type="jp.groupsession.v2.adr.adr070.Adr070Form" />
+        <form-bean name="adr070knForm" type="jp.groupsession.v2.adr.adr070kn.Adr070knForm" />
+        <form-bean name="adr080Form" type="jp.groupsession.v2.adr.adr080.Adr080Form" />
+        <form-bean name="adr090Form" type="jp.groupsession.v2.adr.adr090.Adr090Form" />
+        <form-bean name="adr100Form" type="jp.groupsession.v2.adr.adr100.Adr100Form" />
+        <form-bean name="adr110Form" type="jp.groupsession.v2.adr.adr110.Adr110Form" />
+        <form-bean name="adr110knForm" type="jp.groupsession.v2.adr.adr110kn.Adr110knForm" />
+        <form-bean name="adr111Form" type="jp.groupsession.v2.adr.adr111.Adr111Form" />
+        <form-bean name="adr120Form" type="jp.groupsession.v2.adr.adr120.Adr120Form" />
+        <form-bean name="adr120knForm" type="jp.groupsession.v2.adr.adr120kn.Adr120knForm" />
+        <form-bean name="adr130Form" type="jp.groupsession.v2.adr.adr130.Adr130Form" />
+        <form-bean name="adr140Form" type="jp.groupsession.v2.adr.adr140.Adr140Form" />
+        <form-bean name="adr160Form" type="jp.groupsession.v2.adr.adr160.Adr160Form" />
+        <form-bean name="adr161Form" type="jp.groupsession.v2.adr.adr161.Adr161Form" />
+        <form-bean name="adr162Form" type="jp.groupsession.v2.adr.adr162.Adr162Form" />
+        <form-bean name="adr170Form" type="jp.groupsession.v2.adr.adr170.Adr170Form" />
+        <form-bean name="adr180Form" type="jp.groupsession.v2.adr.adr180.Adr180Form" />
+        <form-bean name="adr190Form" type="jp.groupsession.v2.adr.adr190.Adr190Form" />
+        <form-bean name="adr200Form" type="jp.groupsession.v2.adr.adr200.Adr200Form" />
+        <form-bean name="adr210Form" type="jp.groupsession.v2.adr.adr210.Adr210Form" />
+        <form-bean name="adr220Form" type="jp.groupsession.v2.adr.adr220.Adr220Form" />
+        <form-bean name="adr230Form" type="jp.groupsession.v2.adr.adr230.Adr230Form" />
+        <form-bean name="adr240Form" type="jp.groupsession.v2.adr.adr240.Adr240Form" />
+        <form-bean name="adr241Form" type="jp.groupsession.v2.adr.adr241.Adr241Form" />
+        <form-bean name="adr250Form" type="jp.groupsession.v2.adr.adr250.Adr250Form" />
+        <form-bean name="adr260Form" type="jp.groupsession.v2.adr.adr260.Adr260Form" />
+        <form-bean name="adr270Form" type="jp.groupsession.v2.adr.adr270.Adr270Form" />
+        <form-bean name="adr280Form" type="jp.groupsession.v2.adr.adr280.Adr280Form" />
+        <form-bean name="adr290Form" type="jp.groupsession.v2.adr.adr290.Adr290Form" />
+        <form-bean name="adr300Form" type="jp.groupsession.v2.adr.adr300.Adr300Form" />
+        <form-bean name="adr310Form" type="jp.groupsession.v2.adr.adr310.Adr310Form" />
+        <form-bean name="adr320Form" type="jp.groupsession.v2.adr.adr320.Adr320Form" />
+        <form-bean name="adr320knForm" type="jp.groupsession.v2.adr.adr320kn.Adr320knForm" />
+        <form-bean name="adr330Form" type="jp.groupsession.v2.adr.adr330.Adr330Form" />
+    </form-beans>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+    <global-forwards type="org.apache.struts.action.ActionForward">
+        <forward name="adrList" path="/address/adr010.do" redirect="false"/>
+        <forward name="adrAdmList" path="/address/adr330.do" redirect="false"/>
+        <forward name="inputAddress" path="/address/adr020.do" />
+        <forward name="companyList" path="/address/adr100.do" />
+        <forward name="inputCompany" path="/address/adr110.do" />
+        <forward name="inputCompanyConfirm" path="/address/adr110kn.do" />
+    </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+        <!-- アドレス帳 -->
+        <action
+            name="adr010Form"
+            path="/address/adr010"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr010.Adr010Action">
+
+            <forward name="redraw" path="/address/adr010.do" />
+            <forward name="adminMenu" path="/address/adr030.do" />
+            <forward name="personalMenu" path="/address/adr050.do" />
+            <forward name="registAddress" path="/address/adr020.do" />
+            <forward name="viewAddress" path="/address/adr020kn.do" />
+            <forward name="addressImport" path="/address/adr070.do" />
+            <forward name="industryList" path="/address/adr080.do" />
+            <forward name="companyList" path="/address/adr100.do" />
+            <forward name="labelList" path="/address/adr280.do" />
+            <forward name="contact" path="/address/adr160.do" />
+            <forward name="yakusyokuEdit" path="/address/adr210.do" />
+
+        </action>
+
+        <!-- アドレス帳登録 -->
+        <action
+            name="adr020Form"
+            path="/address/adr020"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr020.Adr020Action">
+
+            <forward name="mine" path="/address/adr020.do" />
+            <forward name="confirmAddress" path="/address/adr020kn.do" />
+            <forward name="backContactHistory" path="/address/adr160.do" />
+        </action>
+
+        <!-- アドレス帳登録確認 -->
+        <action
+            name="adr020knForm"
+            path="/address/adr020kn"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr020kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr020kn.Adr020knAction">
+
+            <forward name="backRegist" path="/address/adr020.do" />
+            <forward name="backContactHistory" path="/address/adr160.do" />
+            <forward name="backContactHistory" path="/address/adr160.do" />
+        </action>
+
+        <!-- 管理者設定メニュー -->
+        <action
+            name="adr030Form"
+            path="/address/adr030"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr030.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr030.Adr030Action">
+
+            <forward name="adr010" path="/address/adr010.do" />
+            <forward name="adr040" path="/address/adr040.do" />
+            <forward name="adr300" path="/address/adr300.do" />
+            <forward name="adr320" path="/address/adr320.do" />
+            <forward name="adr330" path="/address/adr330.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+        </action>
+
+        <!-- 権限設定 -->
+        <action
+            name="adr040Form"
+            path="/address/adr040"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr040.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr040.Adr040Action">
+
+            <forward name="adr030" path="/address/adr030.do" />
+            <forward name="adr040kn" path="/address/adr040kn.do" />
+        </action>
+
+       <!-- 権限設定確認 -->
+       <action
+            name="adr040knForm"
+            path="/address/adr040kn"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr040kn.Adr040knAction">
+
+            <forward name="adr040" path="/address/adr040.do" />
+            <forward name="adr030" path="/address/adr030.do" />
+       </action>
+
+        <!-- 個人設定メニュー -->
+        <action
+            name="adr050Form"
+            path="/address/adr050"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr050.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr050.Adr050Action">
+
+            <forward name="adr010" path="/address/adr010.do" />
+            <forward name="adr060" path="/address/adr060.do" />
+            <forward name="adr310" path="/address/adr310.do" />
+            <forward name="mainPriSetting" path="/main/man030.do" />
+        </action>
+
+        <!-- 表示件数設定 -->
+        <action
+            name="adr060Form"
+            path="/address/adr060"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr060.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr060.Adr060Action">
+
+            <forward name="adr050" path="/address/adr050.do" />
+            <forward name="changeOk" path="/address/adr060.do?CMD=adr060commit" />
+            <forward name="changeCancel" path="/address/adr060.do?CMD=changeCancel" />
+        </action>
+
+        <!-- アドレス帳インポート -->
+        <action
+            name="adr070Form"
+            path="/address/adr070"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr070.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr070.Adr070Action">
+
+            <forward name="confirmAddressImport" path="/address/adr070kn.do" />
+        </action>
+
+        <!-- アドレス帳インポート確認 -->
+        <action
+            name="adr070knForm"
+            path="/address/adr070kn"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr070kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr070kn.Adr070knAction">
+
+            <forward name="backAddressImport" path="/address/adr070.do" />
+        </action>
+
+        <!-- 業種一覧 -->
+        <action
+            name="adr080Form"
+            path="/address/adr080"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr080.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr080.Adr080Action">
+
+            <forward name="adr010" path="/address/adr010.do" />
+            <forward name="adr090" path="/address/adr090.do" />
+        </action>
+
+        <!-- 業種登録 -->
+        <action
+            name="adr090Form"
+            path="/address/adr090"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr090.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr090.Adr090Action">
+
+            <forward name="adr080" path="/address/adr080.do" />
+            <forward name="adr090" path="/address/adr090.do" />
+        </action>
+
+        <!-- 会社一覧 -->
+        <action
+            name="adr100Form"
+            path="/address/adr100"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr100.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr100.Adr100Action">
+
+            <forward name="importCompany" path="/address/adr120.do" />
+            <forward name="adr100" path="/address/adr100.do" />
+        </action>
+
+        <!-- 会社登録 -->
+        <action
+            name="adr110Form"
+            path="/address/adr110"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr110.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr110.Adr110Action">
+
+            <forward name="confirmCompany" path="/address/adr110kn.do" />
+            <forward name="inputCompanyBase" path="/address/adr111.do" />
+            <forward name="backadr110kn" path="/address/adr110kn.do" />
+        </action>
+
+        <!-- 会社登録確認 -->
+        <action
+            name="adr110knForm"
+            path="/address/adr110kn"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr110kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr110kn.Adr110knAction">
+            <forward name="viewAddress" path="/address/adr020kn.do" />
+
+        </action>
+
+        <!-- 支店・営業所登録 -->
+        <action
+            name="adr111Form"
+            path="/address/adr111"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr111.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr111.Adr111Action">
+        </action>
+
+        <!-- 会社インポート -->
+        <action
+            name="adr120Form"
+            path="/address/adr120"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr120.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr120.Adr120Action">
+
+            <forward name="confirmCompanyImport" path="/address/adr120kn.do" />
+        </action>
+
+        <!-- 会社インポート確認 -->
+        <action
+            name="adr120knForm"
+            path="/address/adr120kn"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr120kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr120kn.Adr120knAction">
+
+            <forward name="backCompanyImport" path="/address/adr120.do" />
+        </action>
+
+        <!-- ラベル一覧 -->
+        <action
+            name="adr130Form"
+            path="/address/adr130"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr130.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr130.Adr130Action">
+
+            <forward name="adr010" path="/address/adr010.do" />
+            <forward name="adr140" path="/address/adr140.do" />
+            <forward name="adr280" path="/address/adr280.do" />
+
+        </action>
+
+        <!-- ラベル登録 -->
+        <action
+            name="adr140Form"
+            path="/address/adr140"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr140.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr140.Adr140Action">
+
+            <forward name="adr130" path="/address/adr130.do" />
+            <forward name="adr140" path="/address/adr140.do" />
+        </action>
+
+        <!-- コンタクト履歴一覧 -->
+        <action
+            name="adr160Form"
+            path="/address/adr160"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr160.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr160.Adr160Action">
+
+            <forward name="adr010" path="/address/adr010.do" />
+            <forward name="adr170" path="/address/adr170.do" />
+            <forward name="adr170Inp" path="/address/adr170.do" />
+            <forward name="adr161" path="/address/adr161.do" />
+            <forward name="registAddress" path="/address/adr020.do" />
+            <forward name="viewAddress" path="/address/adr020kn.do" />
+        </action>
+
+        <!-- コンタクト履歴詳細 -->
+        <action
+            name="adr161Form"
+            path="/address/adr161"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr161.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr161.Adr161Action">
+
+            <forward name="adr160" path="/address/adr160.do" />
+            <forward name="adr170Inp" path="/address/adr170.do" />
+        </action>
+
+        <!-- コンタクト履歴詳細ポップアップ -->
+        <action
+            name="adr162Form"
+            path="/address/adr162"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr162.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr162.Adr162Action">
+        </action>
+
+        <!-- コンタクト履歴登録 -->
+        <action
+            name="adr170Form"
+            path="/address/adr170"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr170.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr170.Adr170Action">
+
+            <forward name="adr160" path="/address/adr160.do" />
+            <forward name="adr161" path="/address/adr161.do" />
+            <forward name="adr170" path="/address/adr170.do" />
+        </action>
+
+        <!-- 役職登録 -->
+        <action
+            name="adr180Form"
+            path="/address/adr180"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr180.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr180.Adr180Action">
+        </action>
+
+        <!-- ラベル選択 -->
+        <action
+            name="adr190Form"
+            path="/address/adr190"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr190.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr190.Adr190Action">
+        </action>
+
+        <!-- ラベル登録(popup) -->
+        <action
+            name="adr200Form"
+            path="/address/adr200"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr200.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr200.Adr200Action">
+        </action>
+
+        <!-- 役職一覧 -->
+        <action
+            name="adr210Form"
+            path="/address/adr210"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr210.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr210.Adr210Action">
+
+            <forward name="adr010" path="/address/adr010.do" />
+            <forward name="adr220" path="/address/adr220.do" />
+        </action>
+
+        <!-- 役職登録編集 -->
+        <action
+            name="adr220Form"
+            path="/address/adr220"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr220.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr220.Adr220Action">
+
+            <forward name="adr210" path="/address/adr210.do" />
+            <forward name="adr220" path="/address/adr220.do" />
+        </action>
+
+        <!-- 企業一覧 -->
+        <action
+            name="adr230Form"
+            path="/address/adr230"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr230.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr230.Adr230Action">
+        </action>
+
+        <!-- 会社選択 -->
+        <action
+            name="adr240Form"
+            path="/address/adr240"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr240.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr240.Adr240Action">
+        </action>
+
+        <!-- 担当者一覧 -->
+        <action
+            name="adr241Form"
+            path="/address/adr241"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr241.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr241.Adr241Action">
+        </action>
+
+        <!-- 会社情報 -->
+        <action
+            name="adr250Form"
+            path="/address/adr250"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr250.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr250.Adr250Action">
+        </action>
+
+        <!-- ラベル選択(アドレス一覧画面) -->
+        <action
+            name="adr260Form"
+            path="/address/adr260"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr260.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr260.Adr260Action">
+        </action>
+
+        <!-- アドレス帳ポップアップ -->
+        <action
+            name="adr270Form"
+            path="/address/adr270"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr270.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr270.Adr270Action">
+        </action>
+
+        <!-- カテゴリ一覧 -->
+        <action
+            name="adr280Form"
+            path="/address/adr280"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr280.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr280.Adr280Action">
+
+            <forward name="back" path="/address/adr010.do" />
+            <forward name="label" path="/address/adr130.do" />
+            <forward name="add" path="/address/adr290.do" />
+            <forward name="edit" path="/address/adr290.do" />
+        </action>
+
+        <!-- カテゴリ登録・編集 画面 -->
+        <action
+            name="adr290Form"
+            path="/address/adr290"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr290.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr290.Adr290Action">
+
+            <forward name="listback" path="/address/adr280.do" />
+            <forward name="adr280back" path="/address/adr290.do" />
+            <forward name="deleteok" path="/address/adr290.do" />
+
+        </action>
+
+        <!-- アドレス登録初期値設定(管理者) -->
+        <action
+            name="adr300Form"
+            path="/address/adr300"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr300.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr300.Adr300Action">
+
+            <forward name="adr030" path="/address/adr030.do" />
+            <forward name="adr300back" path="/address/adr030.do" />
+            <forward name="changeOk" path="/address/adr300.do?CMD=adr300commit" />
+            <forward name="changeCancel" path="/address/adr300.do?CMD=adr300reload" />
+        </action>
+
+        <!-- アドレス登録初期値設定(管理者) -->
+        <action
+            name="adr310Form"
+            path="/address/adr310"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr310.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr310.Adr310Action">
+
+            <forward name="adr050" path="/address/adr050.do" />
+            <forward name="adr310back" path="/address/adr050.do" />
+            <forward name="changeOk" path="/address/adr310.do?CMD=adr310commit" />
+            <forward name="changeCancel" path="/address/adr310.do?CMD=adr310reload" />
+        </action>
+        <!-- アドレス登録権限設定(管理者) -->
+        <action
+            name="adr320Form"
+            path="/address/adr320"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr320.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr320.Adr320Action">
+
+            <forward name="adr030" path="/address/adr030.do" />
+            <forward name="adr320back" path="/address/adr030.do" />
+            <forward name="adr320kn" path="/address/adr320kn.do" />
+        </action>
+        <!-- アドレス登録権限設定確認(管理者) -->
+        <action
+            name="adr320knForm"
+            path="/address/adr320kn"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr320kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr320kn.Adr320knAction">
+
+            <forward name="adr030" path="/address/adr030.do" />
+            <forward name="adr320" path="/address/adr320.do" />
+            <forward name="kakutei" path="/address/adr320kn.do" />
+        </action>
+        <!-- 管理者設定 アドレス帳管理 -->
+        <action
+            name="adr330Form"
+            path="/address/adr330"
+            scope="request"
+            input="/WEB-INF/plugin/address/jsp/adr330.jsp"
+            validate="false"
+            type="jp.groupsession.v2.adr.adr330.Adr330Action">
+
+            <forward name="redraw" path="/address/adr330.do" />
+            <forward name="adr330back" path="/address/adr030.do" />
+            <forward name="registAddress" path="/address/adr020.do" />
+
+        </action>
+        
+    </action-mappings>
+
+</struts-config>

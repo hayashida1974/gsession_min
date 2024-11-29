@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+      <form-bean name="man001Form" type="jp.groupsession.v2.man.man001.Man001Form" />
+      <form-bean name="man002Form" type="jp.groupsession.v2.man.man002.Man002Form" />
+      <form-bean name="man020Form" type="jp.groupsession.v2.man.man020.Man020Form" />
+      <form-bean name="man021Form" type="jp.groupsession.v2.man.man021.Man021Form" />
+      <form-bean name="man021knForm" type="jp.groupsession.v2.man.man021kn.Man021knForm" />
+      <form-bean name="man022knForm" type="jp.groupsession.v2.man.man022kn.Man022knForm" />
+      <form-bean name="man023Form" type="jp.groupsession.v2.man.man023.Man023Form" />
+      <form-bean name="man024knForm" type="jp.groupsession.v2.man.man024kn.Man024knForm" />
+      <form-bean name="man025Form" type="jp.groupsession.v2.man.man025.Man025Form" />
+      <form-bean name="man026Form" type="jp.groupsession.v2.man.man026.Man026Form" />
+      <form-bean name="man027knForm" type="jp.groupsession.v2.man.man027kn.Man027knForm" />
+      <form-bean name="man028Form" type="jp.groupsession.v2.man.man028.Man028Form" />
+      <form-bean name="man028knForm" type="jp.groupsession.v2.man.man028kn.Man028knForm" />
+      <form-bean name="man029Form" type="jp.groupsession.v2.man.man029.Man029Form" />
+      <form-bean name="man029knForm" type="jp.groupsession.v2.man.man029kn.Man029knForm" />
+      <form-bean name="man032Form" type="jp.groupsession.v2.man.man032.Man032Form" />
+      <form-bean name="man030Form" type="jp.groupsession.v2.man.man030.Man030Form" />
+      <form-bean name="man040Form" type="jp.groupsession.v2.man.man040.Man040Form" />
+      <form-bean name="man050Form" type="jp.groupsession.v2.man.man050.Man050Form" />
+      <form-bean name="man060Form" type="jp.groupsession.v2.man.man060.Man060Form" />
+      <form-bean name="man060knForm" type="jp.groupsession.v2.man.man060kn.Man060knForm" />
+      <form-bean name="man070Form" type="jp.groupsession.v2.man.man070.Man070Form" />
+      <form-bean name="man070knForm" type="jp.groupsession.v2.man.man070kn.Man070knForm" />
+      <form-bean name="man080Form" type="jp.groupsession.v2.man.man080.Man080Form" />
+      <form-bean name="man080knForm" type="jp.groupsession.v2.man.man080kn.Man080knForm" />
+      <form-bean name="man081Form" type="jp.groupsession.v2.man.man081.Man081Form" />
+      <form-bean name="man090Form" type="jp.groupsession.v2.man.man090.Man090Form" />
+      <form-bean name="man100Form" type="jp.groupsession.v2.man.man100.Man100Form" />
+      <form-bean name="man110Form" type="jp.groupsession.v2.man.man110.Man110Form" />
+      <form-bean name="man110knForm" type="jp.groupsession.v2.man.man110kn.Man110knForm" />
+      <form-bean name="man111Form" type="jp.groupsession.v2.man.man111.Man111Form" />
+      <form-bean name="man112Form" type="jp.groupsession.v2.man.man112.Man112Form" />
+      <form-bean name="man112knForm" type="jp.groupsession.v2.man.man112kn.Man112knForm" />
+      <form-bean name="man120Form" type="jp.groupsession.v2.man.man120.Man120Form" />
+      <form-bean name="man121Form" type="jp.groupsession.v2.man.man121.Man121Form" />
+      <form-bean name="man122Form" type="jp.groupsession.v2.man.man122.Man122Form" />
+      <form-bean name="man130Form" type="jp.groupsession.v2.man.man130.Man130Form" />
+      <form-bean name="man130knForm" type="jp.groupsession.v2.man.man130kn.Man130knForm" />
+      <form-bean name="man140Form" type="jp.groupsession.v2.man.man140.Man140Form" />
+      <form-bean name="man140knForm" type="jp.groupsession.v2.man.man140kn.Man140knForm" />
+      <form-bean name="man150Form" type="jp.groupsession.v2.man.man150.Man150Form" />
+      <form-bean name="man150knForm" type="jp.groupsession.v2.man.man150kn.Man150knForm" />
+      <form-bean name="man160Form" type="jp.groupsession.v2.man.man160.Man160Form" />
+      <form-bean name="man160knForm" type="jp.groupsession.v2.man.man160kn.Man160knForm" />
+      <form-bean name="man170Form" type="jp.groupsession.v2.man.man170.Man170Form" />
+      <form-bean name="man180Form" type="jp.groupsession.v2.man.man180.Man180Form" />
+      <form-bean name="man180knForm" type="jp.groupsession.v2.man.man180kn.Man180knForm" />
+      <form-bean name="man190Form" type="jp.groupsession.v2.man.man190.Man190Form" />
+      <form-bean name="man190knForm" type="jp.groupsession.v2.man.man190kn.Man190knForm" />
+      <form-bean name="man200Form" type="jp.groupsession.v2.man.man200.Man200Form" />
+      <form-bean name="man200knForm" type="jp.groupsession.v2.man.man200kn.Man200knForm" />
+      <form-bean name="man210Form" type="jp.groupsession.v2.man.man210.Man210Form" />
+      <form-bean name="man210knForm" type="jp.groupsession.v2.man.man210kn.Man210knForm" />
+      <form-bean name="man220Form" type="jp.groupsession.v2.man.man220.Man220Form" />
+      <form-bean name="man230Form" type="jp.groupsession.v2.man.man230.Man230Form" />
+      <form-bean name="man240Form" type="jp.groupsession.v2.man.man240.Man240Form" />
+      <form-bean name="man240knForm" type="jp.groupsession.v2.man.man240kn.Man240knForm" />
+      <form-bean name="man250Form" type="jp.groupsession.v2.man.man250.Man250Form" />
+      <form-bean name="man260Form" type="jp.groupsession.v2.man.man260.Man260Form" />
+      <form-bean name="man260knForm" type="jp.groupsession.v2.man.man260kn.Man260knForm" />
+      <form-bean name="man270Form" type="jp.groupsession.v2.man.man270.Man270Form" />
+      <form-bean name="man270knForm" type="jp.groupsession.v2.man.man270kn.Man270knForm" />
+      <form-bean name="man280Form" type="jp.groupsession.v2.man.man280.Man280Form" />
+      <form-bean name="man280knForm" type="jp.groupsession.v2.man.man280kn.Man280knForm" />
+      <form-bean name="man290Form" type="jp.groupsession.v2.man.man290.Man290Form" />
+      <form-bean name="man290knForm" type="jp.groupsession.v2.man.man290kn.Man290knForm" />
+      <form-bean name="man300Form" type="jp.groupsession.v2.man.man300.Man300Form" />
+      <form-bean name="man300knForm" type="jp.groupsession.v2.man.man300kn.Man300knForm" />
+      <form-bean name="man310Form" type="jp.groupsession.v2.man.man310.Man310Form" />
+      <form-bean name="man320Form" type="jp.groupsession.v2.man.man320.Man320Form" />
+      <form-bean name="man330Form" type="jp.groupsession.v2.man.man330.Man330Form" />
+      <form-bean name="man330knForm" type="jp.groupsession.v2.man.man330kn.Man330knForm" />
+      <form-bean name="man340Form" type="jp.groupsession.v2.man.man340.Man340Form" />
+      <form-bean name="man340knForm" type="jp.groupsession.v2.man.man340kn.Man340knForm" />
+      <form-bean name="man350Form" type="jp.groupsession.v2.man.man350.Man350Form" />
+      <form-bean name="man350knForm" type="jp.groupsession.v2.man.man350kn.Man350knForm" />
+      <form-bean name="man360Form" type="jp.groupsession.v2.man.man360.Man360Form" />
+      <form-bean name="man360knForm" type="jp.groupsession.v2.man.man360kn.Man360knForm" />
+      <form-bean name="man370Form" type="jp.groupsession.v2.man.man370.Man370Form" />
+      <form-bean name="man380Form" type="jp.groupsession.v2.man.man380.Man380Form" />
+      <form-bean name="man380knForm" type="jp.groupsession.v2.man.man380kn.Man380knForm" />
+      <form-bean name="man390Form" type="jp.groupsession.v2.man.man390.Man390Form" />
+      <form-bean name="man420Form" type="jp.groupsession.v2.man.man420.Man420Form" />
+      <form-bean name="man420knForm" type="jp.groupsession.v2.man.man420kn.Man420knForm" />
+      <form-bean name="man430Form" type="jp.groupsession.v2.man.man430.Man430Form" />
+      <form-bean name="man430knForm" type="jp.groupsession.v2.man.man430kn.Man430knForm" />
+
+      <form-bean name="man440Form" type="jp.groupsession.v2.man.man440.Man440Form" />
+      <form-bean name="man450Form" type="jp.groupsession.v2.man.man450.Man450Form" />
+      <form-bean name="man450knForm" type="jp.groupsession.v2.man.man450kn.Man450knForm" />
+      <form-bean name="man460Form" type="jp.groupsession.v2.man.man460.Man460Form" />
+      <form-bean name="man460knForm" type="jp.groupsession.v2.man.man460kn.Man460knForm" />
+      <form-bean name="man470Form" type="jp.groupsession.v2.man.man470.Man470Form" />
+      <form-bean name="man470knForm" type="jp.groupsession.v2.man.man470kn.Man470knForm" />
+      <form-bean name="man480Form" type="jp.groupsession.v2.man.man480.Man480Form" />
+      <form-bean name="man480knForm" type="jp.groupsession.v2.man.man480kn.Man480knForm" />
+      <form-bean name="man490Form" type="jp.groupsession.v2.man.man490.Man490Form" />
+      <form-bean name="man491Form" type="jp.groupsession.v2.man.man491.Man491Form" />
+      <form-bean name="man491knForm" type="jp.groupsession.v2.man.man491kn.Man491knForm" />
+
+      <form-bean name="man500Form" type="jp.groupsession.v2.man.man500.Man500Form" />
+      <form-bean name="man500knForm" type="jp.groupsession.v2.man.man500kn.Man500knForm" />
+      <form-bean name="man510Form" type="jp.groupsession.v2.man.man510.Man510Form" />
+      <form-bean name="man510knForm" type="jp.groupsession.v2.man.man510kn.Man510knForm" />
+      <form-bean name="man520Form" type="jp.groupsession.v2.man.man520.Man520Form" />
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+  <global-forwards type="org.apache.struts.action.ActionForward">
+        <forward name="gf_main" path="/main/man001.do" redirect="false"/>
+        <forward name="gf_main_kanri" path="/main/man002.do" redirect="false"/>
+  </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+       <!-- メイン -->
+       <action
+            name="man001Form"
+            path="/main/man001"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man001.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man001.Man001Action">
+            <forward name="ktools" path="/main/man002.do" />
+            <forward name="pset" path="/main/man030.do" />
+            <forward name="cir020" path="/circular/cir020.do" />
+            <forward name="smlCheck" path="/smail/sml030.do" />
+            <forward name="month" path="/schedule/sch020.do" />
+            <forward name="infoSetting" path="/main/man320.do" />
+            <forward name="portal" path="/portal/ptl010.do" />
+            <forward name="portalSetting" path="/portal/ptl020.do" />
+       </action>
+
+       <!-- 管理者ツールメニュー -->
+       <action
+            name="man002Form"
+            path="/main/man002"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man002.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man002.Man002Action">
+            <forward name="manLogCount" path="/main/man390.do" />
+            <forward name="back" path="/main/man001.do" />
+            <forward name="enterpriseiinfo" path="/common/cmn160.do" />
+            <forward name="grouplist" path="/user/usr010.do" />
+            <forward name="userlist" path="/user/usr030.do" />
+            <forward name="holidaylist" path="/main/man020.do" />
+            <forward name="jobschedule" path="/main/man040.do" />
+            <forward name="lastlogin" path="/main/man050.do?man050Backurl=2" />
+            <forward name="diskconf" path="/main/man060.do" />
+            <forward name="pxyconf" path="/main/man070.do" />
+            <forward name="backupconf" path="/main/man080.do" />
+            <forward name="manualbackup" path="/main/man081.do" />
+            <forward name="loglist" path="/main/man090.do" />
+            <forward name="poslist" path="/main/man100.do" />
+            <forward name="pluginlist" path="/main/man120.do" />
+            <forward name="fileConf" path="/main/man130.do" />
+            <forward name="sessiontime" path="/main/man140.do" />
+            <forward name="licenseReg" path="/main/man150.do" />
+            <forward name="lhisAutoDel" path="/main/man180.do" />
+            <forward name="lhisSyudoDel" path="/main/man190.do" />
+            <forward name="pswdConf" path="/main/man200.do" />
+            <forward name="mblUse" path="/main/man210.do" />
+            <forward name="sortConfig" path="/main/man220.do" />
+            <forward name="system" path="/main/man230.do" />
+            <forward name="oplogConf" path="/main/man240.do" />
+            <forward name="oplogAutoDel" path="/main/man260.do" />
+            <forward name="oplogSearch" path="/main/man250.do" />
+            <forward name="oplogSyudoDel" path="/main/man380.do" />
+            <forward name="loginConf" path="/main/man270.do" />
+            <forward name="memshipconf" path="/main/man330.do" />
+            <forward name="otpConf" path="/main/man510.do" />
+            <forward name="beLogTime" path="/main/man050.do?man050Backurl=3" />
+            <forward name="layoutConfig" path="/main/man350.do" />
+            <forward name="linkTime" path="/main/man420.do" />
+            <forward name="externalPage" path="/main/man430.do" />
+            <forward name="cybozuImport" path="/main/man440.do" />
+            <forward name="pconfedit" path="/main/man500.do" />
+            <forward name="useddata" path="/main/man520.do" />
+            <forward name="otp_sendto_address" path="/user/usr061.do" />
+            <forward name="oauthManager" path="/common/cmn250.do" />
+            <forward name="smlConf" path="/common/cmn280.do" />
+            <forward name="autoDel" path="/common/cmn300.do" />
+            <forward name="manualDel" path="/common/cmn310.do" />
+            <forward name="dspConf" path="/common/cmn320.do" />
+            <forward name="firewallConf" path="/common/cmn390.do" />
+       </action>
+
+       <!-- 休日一覧 -->
+       <action
+            name="man020Form"
+            path="/main/man020"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man020.Man020Action">
+            <forward name="back" path="/main/man002.do" />
+            <forward name="template" path="/main/man023.do" />
+            <forward name="add" path="/main/man021.do" />
+            <forward name="delete" path="/main/man022kn.do" />
+            <forward name="edit" path="/main/man021.do" />
+            <forward name="csv" path="/main/man028.do" />
+       </action>
+
+       <!-- 休日追加・修正画面 -->
+       <action
+            name="man021Form"
+            path="/main/man021"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man021.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man021.Man021Action">
+            <forward name="backToList" path="/main/man020.do" />
+            <forward name="confirm" path="/main/man021kn.do" />
+       </action>
+
+       <!-- 休日追加・修正確認画面 -->
+       <action
+            name="man021knForm"
+            path="/main/man021kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man021kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man021kn.Man021knAction">
+            <forward name="backToInput" path="/main/man021.do" />
+            <forward name="moveList" path="/main/man020.do" />
+       </action>
+
+       <!-- 休日削除確認画面 -->
+       <action
+            name="man022knForm"
+            path="/main/man022kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man022kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man022kn.Man022knAction">
+            <forward name="moveList" path="/main/man020.do" />
+       </action>
+
+       <!-- テンプレート一覧画面 -->
+       <action
+            name="man023Form"
+            path="/main/man023"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man023.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man023.Man023Action">
+            <forward name="backHoliday" path="/main/man020.do" />
+            <forward name="reflect" path="/main/man024kn.do" />
+            <forward name="addTemp" path="/main/man025.do" />
+            <forward name="editTemp" path="/main/man025.do" />
+            <forward name="editTempKaku" path="/main/man026.do" />
+
+            <forward name="delTemp" path="/main/man027kn.do" />
+
+            <forward name="import" path="/main/man029.do" />
+       </action>
+
+       <!-- テンプレート削除確認画面 -->
+       <action
+            name="man024knForm"
+            path="/main/man024kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man024kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man024kn.Man024knAction">
+            <forward name="backTemp" path="/main/man023.do" />
+            <forward name="list" path="/main/man020.do" />
+       </action>
+
+       <!-- テンプレート追加・編集画面 -->
+       <action
+            name="man025Form"
+            path="/main/man025"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man025.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man025.Man025Action">
+            <forward name="backTemp" path="/main/man023.do" />
+            <forward name="kakucho" path="/main/man026.do" />
+            <forward name="list" path="/main/man023.do" />
+       </action>
+
+       <!-- テンプレート追加・編集画面-拡張 -->
+       <action
+            name="man026Form"
+            path="/main/man026"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man026.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man026.Man026Action">
+            <forward name="backTemp" path="/main/man023.do" />
+            <forward name="normal" path="/main/man025.do" />
+            <forward name="list" path="/main/man023.do" />
+       </action>
+
+       <!-- テンプレート削除確認画面 -->
+       <action
+            name="man027knForm"
+            path="/main/man027kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man027kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man027kn.Man027knAction">
+            <forward name="backTemp" path="/main/man023.do" />
+            <forward name="delTempCommit" path="/main/man023.do" />
+            <forward name="list" path="/main/man023.do" />
+       </action>
+
+       <!-- 休日設定 インポート画面 -->
+       <action
+            name="man028Form"
+            path="/main/man028"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man028.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man028.Man028Action">
+            <forward name="backHolSet" path="/main/man020.do" />
+            <forward name="import" path="/main/man028kn.do" />
+       </action>
+
+       <!-- 休日設定 インポート確認画面 -->
+       <action
+            name="man028knForm"
+            path="/main/man028kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man028kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man028kn.Man028knAction">
+            <forward name="back_holImp" path="/main/man028.do" />
+            <forward name="importComp" path="/main/man020.do" />
+       </action>
+
+       <!-- 休日テンプレート インポート画面 -->
+       <action
+            name="man029Form"
+            path="/main/man029"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man029.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man029.Man029Action">
+            <forward name="backHolTmp" path="/main/man023.do" />
+            <forward name="import_kakunin" path="/main/man029kn.do" />
+       </action>
+
+       <!-- 休日テンプレート インポート確認画面 -->
+       <action
+            name="man029knForm"
+            path="/main/man029kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man029kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man029kn.Man029knAction">
+            <forward name="back_import" path="/main/man029.do" />
+            <forward name="import_kakunin" path="/main/man023.do" />
+            <forward name="importComp" path="/main/man023.do" />
+       </action>
+
+       <!-- 個人設定メニュー -->
+       <action
+            name="man030Form"
+            path="/main/man030"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man030.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man030.Man030Action">
+            <forward name="back" path="/main/man001.do" />
+            <forward name="mygroup" path="/common/cmn130.do" />
+            <forward name="theme" path="/common/cmn170.do" />
+            <forward name="userEdit" path="/user/usr031.do?CMD=edit" />
+            <forward name="passwordEdit" path="/user/usr050.do" />
+            <forward name="topMenuEdit" path="/common/cmn140.do" />
+            <forward name="mainDspConf" path="/common/cmn150.do" />
+            <forward name="portal" path="/portal/ptl140.do" />
+            <forward name="mainLayout" path="/main/man360.do" />
+            <forward name="language" path="/main/man370.do" />
+            <forward name="cybozu" path="/main/man490.do" />
+            <forward name="otp_sendto_address" path="/user/usr060.do" />
+            <forward name="smlPconf" path="/common/cmn290.do" />
+            <forward name="dspConf" path="/common/cmn350.do" />
+       </action>
+
+       <!-- バッチジョブ起動時間設定画面 -->
+       <action
+            name="man040Form"
+            path="/main/man040"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man040.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man040.Man040Action">
+            <forward name="040_back" path="/main/man002.do" />
+            <forward name="setting" path="/main/man040kn.do" />
+            <forward name="confirm" path="/main/man040.do?CMD=batchJobOk" />
+            <forward name="040_init" path="/main/man040.do" />
+
+       </action>
+
+       <!-- バッチジョブ起動時間設定確認画面 -->
+       <action
+            name="man040Form"
+            path="/main/man040kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man040kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man040kn.Man040knAction">
+            <forward name="040kn_back" path="/main/man040.do" />
+            <forward name="setting" path="/main/man040kn.do" />
+            <forward name="menu" path="/main/man002.do" />
+       </action>
+
+       <!-- 最終ログイン時間一覧画面 -->
+       <action
+            name="man050Form"
+            path="/main/man050"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man050.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man050.Man050Action">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="main" path="/main/man001.do" />
+            <forward name="detail" path="/main/man170.do" />
+            <forward name="list" path="/main/man050.do" />
+            <forward name="initsearch" path="/main/man050.do" />
+            <forward name="month" path="/schedule/sch020.do" />
+       </action>
+
+       <!-- ディスク容量管理画面 -->
+       <action
+            name="man060Form"
+            path="/main/man060"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man060.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man060.Man060Action">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="confirm" path="/main/man060kn.do" />
+       </action>
+
+       <!-- ディスク容量管理確認画面 -->
+       <action
+            name="man060knForm"
+            path="/main/man060kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man060kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man060kn.Man060knAction">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="back" path="/main/man060.do" />
+       </action>
+
+       <!-- プロキシサーバ設定画面 -->
+       <action
+            name="man070Form"
+            path="/main/man070"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man070.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man070.Man070Action">
+            <forward name="back_to_kanri_menu" path="/main/man002.do" />
+            <forward name="kakunin" path="/main/man070kn.do" />
+       </action>
+
+       <!-- プロキシサーバ設定確認画面 -->
+       <action
+            name="man070knForm"
+            path="/main/man070kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man070kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man070kn.Man070knAction">
+            <forward name="input" path="/main/man070.do" />
+            <forward name="back_to_kanri_menu" path="/main/man002.do" />
+       </action>
+
+       <!-- 自動バックアップ設定画面 -->
+       <action
+            name="man080Form"
+            path="/main/man080"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man080.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man080.Man080Action">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="confirm" path="/main/man080kn.do" />
+            <forward name="mine" path="/main/man080.do" />
+       </action>
+
+       <!-- 自動バックアップ設定確認画面 -->
+       <action
+            name="man080knForm"
+            path="/main/man080kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man080kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man080kn.Man080knAction">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="backInput" path="/main/man080.do" />
+       </action>
+
+       <!-- 手動バックアップ設定画面 -->
+       <action
+            name="man081Form"
+            path="/main/man081"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man081.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man081.Man081Action">
+            <forward name="delete" path="/main/man081.do?CMD=deleteOk" />
+            <forward name="confirm" path="/main/man081.do?CMD=backUpOk" />
+            <forward name="init" path="/main/man081.do" />
+       </action>
+
+       <!-- ログ一覧画面 -->
+       <action
+            name="man090Form"
+            path="/main/man090"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man090.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man090.Man090Action">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="mine" path="/main/man090.do" />
+       </action>
+
+       <!-- 役職マネージャー -->
+       <action
+            name="man100Form"
+            path="/main/man100"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man100.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man100.Man100Action">
+            <forward name="add" path="/main/man110.do" />
+            <forward name="import" path="/main/man112.do" />
+            <forward name="admin_back" path="/main/man002.do" />
+       </action>
+
+       <!-- 役職登録 -->
+       <action
+            name="man110Form"
+            path="/main/man110"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man110.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man110.Man110Action">
+            <forward name="conf" path="/main/man110kn.do" />
+            <forward name="init" path="/main/man110.do" />
+            <forward name="list_back" path="/main/man100.do" />
+       </action>
+
+       <!-- 役職登録確認 -->
+       <action
+            name="man110knForm"
+            path="/main/man110kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man110kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man110kn.Man110knAction">
+            <forward name="list_back" path="/main/man100.do" />
+            <forward name="input_back" path="/main/man110.do" />
+       </action>
+
+       <!-- 役職登録POPUP -->
+       <action
+            name="man111Form"
+            path="/main/man111"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man111.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man111.Man111Action">
+       </action>
+
+       <!-- 役職インポート -->
+       <action
+            name="man112Form"
+            path="/main/man112"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man112.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man112.Man112Action">
+            <forward name="list_back" path="/main/man100.do" />
+            <forward name="kakunin" path="/main/man112kn.do" />
+       </action>
+
+       <!-- 役職インポー確認ト -->
+       <action
+            name="man112knForm"
+            path="/main/man112kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man112kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man112kn.Man112knAction">
+            <forward name="man112_back" path="/main/man112.do" />
+            <forward name="list" path="/main/man100.do" />
+       </action>
+
+       <!-- プラグインマネージャー -->
+       <action
+            name="man120Form"
+            path="/main/man120"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man120.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man120.Man120Action">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="120_commit" path="/main/man120.do?CMD=120_commit_ok" />
+            <forward name="man120" path="/main/man120.do" />
+            <forward name="man121" path="/main/man121.do" />
+            <forward name="man122" path="/main/man122.do" />
+            <forward name="man280" path="/main/man280.do" />
+            <forward name="man340" path="/main/man340.do" />
+            <forward name="man340_edit" path="/main/man340.do?CMD=edit" />
+       </action>
+
+       <!-- プラグインマネージャー 制限設定一覧 -->
+       <action
+            name="man121Form"
+            path="/main/man121"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man121.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man121.Man121Action">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="man120" path="/main/man120.do" />
+            <forward name="man122" path="/main/man122.do" />
+            <forward name="man280" path="/main/man280.do" />
+       </action>
+
+       <!-- プラグインマネージャー メニュー表示設定 -->
+       <action
+            name="man122Form"
+            path="/main/man122"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man122.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man122.Man122Action">
+            <forward name="menu" path="/main/man002.do" />
+            <forward name="122_commit" path="/main/man122.do?CMD=122_commit_ok" />
+            <forward name="man120" path="/main/man120.do" />
+            <forward name="man121" path="/main/man121.do" />
+            <forward name="man122" path="/main/man122.do" />
+       </action>
+
+       <!-- 添付ファイル設定 -->
+       <action
+            name="man130Form"
+            path="/main/man130"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man130.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man130.Man130Action">
+            <forward name="ok" path="/main/man130kn.do" />
+            <forward name="back130" path="/main/man002.do" />
+       </action>
+
+       <!-- 添付ファイル設定確認 -->
+       <action
+            name="man130knForm"
+            path="/main/man130kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man130kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man130kn.Man130knAction">
+            <forward name="backRedraw" path="/main/man130.do" />
+            <forward name="setteiClick" path="/main/man002.do" />
+       </action>
+
+       <!-- セッション保持時間設定 -->
+       <action
+            name="man140Form"
+            path="/main/man140"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man140.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man140.Man140Action">
+            <forward name="ok" path="/main/man140kn.do" />
+            <forward name="back140" path="/main/man002.do" />
+       </action>
+
+       <!-- セッション保持時間設定確認 -->
+       <action
+            name="man140knForm"
+            path="/main/man140kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man140kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man140kn.Man140knAction">
+            <forward name="backRedraw" path="/main/man140.do" />
+            <forward name="setteiClick" path="/main/man002.do" />
+       </action>
+
+       <!-- ライセンスファイル登録・更新 -->
+       <action
+            name="man150Form"
+            path="/main/man150"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man150.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man150.Man150Action">
+            <forward name="backKanriMenu" path="/main/man002.do" />
+            <forward name="doImport" path="/main/man150kn.do" />
+       </action>
+
+       <!-- ライセンスファイル登録・更新確認 -->
+       <action
+            name="man150knForm"
+            path="/main/man150kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man150kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man150kn.Man150knAction">
+            <forward name="backToImport" path="/main/man150.do" />
+            <forward name="importComp" path="/main/man002.do" />
+       </action>
+
+       <!-- ログイン履歴詳細 -->
+       <action
+            name="man170Form"
+            path="/main/man170"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man170.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man170.Man170Action">
+            <forward name="backToLoginList" path="/main/man050.do" />
+       </action>
+
+       <!-- ログイン履歴自動削除設定 -->
+       <action
+            name="man180Form"
+            path="/main/man180"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man180.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man180.Man180Action">
+            <forward name="ktools" path="/main/man002.do" />
+            <forward name="batch_settei_kakunin" path="/main/man180kn.do" />
+       </action>
+
+       <!-- ログイン履歴自動削除設定 -->
+       <action
+            name="man180knForm"
+            path="/main/man180kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man180kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man180kn.Man180knAction">
+            <forward name="updateComp" path="/main/man002.do" />
+            <forward name="back_batch_input" path="/main/man180.do" />
+       </action>
+
+       <!-- ログイン履歴手動削除 -->
+       <action
+            name="man190Form"
+            path="/main/man190"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man190.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man190.Man190Action">
+            <forward name="ktools" path="/main/man002.do" />
+            <forward name="syudo_del_kakunin" path="/main/man190kn.do" />
+       </action>
+
+       <!-- ログイン履歴手動削除削除 -->
+       <action
+            name="man190knForm"
+            path="/main/man190kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man190kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man190kn.Man190knAction">
+            <forward name="deleteComp" path="/main/man002.do" />
+            <forward name="back_syudo_input" path="/main/man190.do" />
+       </action>
+
+       <!-- パスワードルール設定 -->
+       <action
+            name="man200Form"
+            path="/main/man200"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man200.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man200.Man200Action">
+            <forward name="ktools" path="/main/man002.do" />
+            <forward name="rule_settei_kakunin" path="/main/man200kn.do" />
+       </action>
+
+       <!-- パスワードルール設定確認 -->
+       <action
+            name="man200knForm"
+            path="/main/man200kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man200kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man200kn.Man200knAction">
+            <forward name="back_pswdConf" path="/main/man200.do" />
+            <forward name="updateComp" path="/main/man002.do" />
+       </action>
+
+       <!-- モバイル使用一括設定 -->
+       <action
+            name="man210Form"
+            path="/main/man210"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man210.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man210.Man210Action">
+            <forward name="ktools" path="/main/man002.do" />
+            <forward name="settei_kakunin" path="/main/man210kn.do" />
+       </action>
+       <!-- モバイル使用一括設定確認 -->
+       <action
+            name="man210knForm"
+            path="/main/man210kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man210kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man210kn.Man210knAction">
+            <forward name="updateMblUse" path="/main/man002.do" />
+            <forward name="back_mblUseConf" path="/main/man210.do" />
+       </action>
+
+       <!-- 並び順設定 -->
+       <action
+            name="man220Form"
+            path="/main/man220"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man220.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man220.Man220Action">
+            <forward name="ktool" path="/main/man002.do" />
+       </action>
+
+       <!-- システム情報確認画面 -->
+       <action
+            name="man230Form"
+            path="/main/man230"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man230.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man230.Man230Action">
+            <forward name="ktool" path="/main/man002.do" />
+       </action>
+
+       <!-- オペレーションログ設定画面 -->
+       <action
+            name="man240Form"
+            path="/main/man240"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man240.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man240.Man240Action">
+            <forward name="ktool" path="/main/man002.do" />
+            <forward name="ok" path="/main/man240kn.do" />
+       </action>
+
+       <!-- オペレーションログ設定確認画面 -->
+       <action
+            name="man240knForm"
+            path="/main/man240kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man240kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man240kn.Man240knAction">
+            <forward name="backRedraw" path="/main/man240.do" />
+            <forward name="ktool" path="/main/man002.do" />
+       </action>
+
+       <!-- オペレーションログ検索画面 -->
+       <action
+            name="man250Form"
+            path="/main/man250"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man250.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man250.Man250Action">
+            <forward name="ktool" path="/main/man002.do" />
+            <forward name="init" path="/main/man250.do" />
+            <forward name="deleteOk" path="/main/man250.do?CMD=deleteOk" />
+            <forward name="research" path="/main/man250.do?CMD=research" />
+       </action>
+
+       <!-- オペレーションログ自動削除設定画面 -->
+       <action
+            name="man260Form"
+            path="/main/man260"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man260.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man260.Man260Action">
+            <forward name="ktool" path="/main/man002.do" />
+            <forward name="man260_opLogKn" path="/main/man260kn.do" />
+       </action>
+
+       <!-- オペレーションログ自動削除設定確認画面 -->
+       <action
+            name="man260knForm"
+            path="/main/man260kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man260kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man260kn.Man260knAction">
+            <forward name="backMan260" path="/main/man260.do" />
+            <forward name="ktool" path="/main/man002.do" />
+       </action>
+
+       <!-- ログイン設定画面 -->
+       <action
+            name="man270Form"
+            path="/main/man270"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man270.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man270.Man270Action">
+            <forward name="confirm_man270" path="/main/man270kn.do" />
+       </action>
+
+       <!-- ログイン設定確認画面 -->
+       <action
+            name="man270knForm"
+            path="/main/man270kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man270kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man270kn.Man270knAction">
+            <forward name="back_man270" path="/main/man270.do" />
+       </action>
+
+       <!-- プラグイン使用制限画面 -->
+       <action
+            name="man280Form"
+            path="/main/man280"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man280.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man280.Man280Action">
+            <forward name="confirm_man280" path="/main/man280kn.do" />
+            <forward name="man120" path="/main/man120.do" />
+            <forward name="man121" path="/main/man121.do" />
+       </action>
+
+       <!-- プラグイン使用制限確認画面 -->
+       <action
+            name="man280knForm"
+            path="/main/man280kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man280kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man280kn.Man280knAction">
+            <forward name="back_man280" path="/main/man280.do" />
+            <forward name="man120" path="/main/man120.do" />
+            <forward name="man121" path="/main/man121.do" />
+       </action>
+
+       <!-- インフォメーション登録画面 -->
+       <action
+            name="man290Form"
+            path="/main/man290"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man290.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man290.Man290Action">
+            <forward name="290_back" path="/main/man320.do" />
+            <forward name="290_ok" path="/main/man290kn.do" />
+            <forward name="redsp" path="/main/man290.do?CMD=redsp" />
+            <forward name="290_delok" path="/main/man290.do?CMD=290_delok" />
+       </action>
+
+       <!-- インフォメーション登録確認画面 -->
+       <action
+            name="man290knForm"
+            path="/main/man290kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man290kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man290kn.Man290knAction">
+            <forward name="290kn_back" path="/main/man290.do" />
+            <forward name="290kn_comp" path="/main/man320.do" />
+       </action>
+
+       <!-- インフォメーション管理者設定画面 -->
+       <action
+            name="man300Form"
+            path="/main/man300"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man300.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man300.Man300Action">
+            <forward name="300_back" path="/main/man320.do" />
+            <forward name="300_ok" path="/main/man300kn.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+       </action>
+
+       <!-- インフォメーション管理者設定確認画面 -->
+       <action
+            name="man300knForm"
+            path="/main/man300kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man300kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man300kn.Man300knAction">
+            <forward name="300kn_back" path="/main/man300.do" />
+            <forward name="300kn_comp" path="/main/man320.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+       </action>
+
+       <!-- インフォメーション詳細POPUP画面 -->
+       <action
+            name="man310Form"
+            path="/main/man310"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man310.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man310.Man310Action">
+       </action>
+
+       <!-- インフォメーション一覧画面 -->
+       <action
+            name="man320Form"
+            path="/main/man320"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man320.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man320.Man320Action">
+            <forward name="ktool" path="/main/man002.do" />
+            <forward name="main" path="/main/man001.do" />
+            <forward name="research" path="/main/man320.do?CMD=research" />
+            <forward name="admconf" path="/main/man300.do" />
+            <forward name="add" path="/main/man290.do" />
+            <forward name="deleteOk" path="/main/man320.do?CMD=deleteOk" />
+       </action>
+
+       <!-- 所属情報一括設定 画面 -->
+       <action
+            name="man330Form"
+            path="/main/man330"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man330.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man330.Man330Action">
+            <forward name="ktool" path="/main/man002.do" />
+            <forward name="export" path="/main/man330.do" />
+            <forward name="import" path="/main/man330.do" />
+            <forward name="import_kn" path="/main/man330kn.do" />
+       </action>
+
+       <!-- 所属情報一括設定確認-インポート画面 -->
+       <action
+            name="man330knForm"
+            path="/main/man330kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man330kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man330kn.Man330knAction">
+            <forward name="man330kn_back" path="/main/man330.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+       </action>
+
+       <!-- メニュー追加画面 -->
+       <action
+            name="man340Form"
+            path="/main/man340"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man340.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man340.Man340Action">
+            <forward name="mine" path="/main/man340.do" />
+            <forward name="man120" path="/main/man120.do" />
+            <forward name="man340kn" path="/main/man340kn.do" />
+       </action>
+       <!-- メニュー追加確認画面 -->
+       <action
+            name="man340knForm"
+            path="/main/man340kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man340kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man340kn.Man340knAction">
+            <forward name="man340kn_back" path="/main/man340kn.do" />
+            <forward name="man340" path="/main/man340.do?CMD=getImg" />
+            <forward name="man120" path="/main/man120.do" />
+       </action>
+
+       <!-- 管理者設定 メイン画面レイアウト設定画面 -->
+       <action
+            name="man350Form"
+            path="/main/man350"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man350.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man350.Man350Action">
+            <forward name="ktool" path="/main/man002.do" />
+            <forward name="moveConfirm" path="/main/man350kn.do" />
+       </action>
+
+       <!-- 管理者設定 メイン画面レイアウト設定確認画面 -->
+       <action
+            name="man350knForm"
+            path="/main/man350kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man350kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man350kn.Man350knAction">
+            <forward name="ktool" path="/main/man002.do" />
+            <forward name="backEditLayout" path="/main/man350.do" />
+       </action>
+
+       <!-- 個人設定 メイン画面レイアウト設定画面 -->
+       <action
+            name="man360Form"
+            path="/main/man360"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man360.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man360.Man360Action">
+            <forward name="pset" path="/main/man030.do" />
+            <forward name="moveConfirm" path="/main/man360kn.do" />
+       </action>
+
+       <!-- 個人設定 メイン画面レイアウト設定確認画面 -->
+       <action
+            name="man360knForm"
+            path="/main/man360kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man360kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man360kn.Man360knAction">
+            <forward name="pset" path="/main/man030.do" />
+            <forward name="backEditLayout" path="/main/man360.do" />
+       </action>
+
+       <!-- 個人設定 言語設定画面 -->
+       <action
+            name="man370Form"
+            path="/main/man370"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man370.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man370.Man370Action">
+            <forward name="backToMenu" path="/main/man030.do" />
+       </action>
+
+       <!-- オペレーションログ手動削除画面 -->
+       <action
+            name="man380Form"
+            path="/main/man380"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man380.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man380.Man380Action">
+            <forward name="ktools" path="/main/man002.do" />
+            <forward name="syudo_del_kakunin" path="/main/man380kn.do" />
+       </action>
+
+       <!-- オペレーションログ手動削除確認画面 -->
+       <action
+            name="man380knForm"
+            path="/main/man380kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man380kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man380kn.Man380knAction">
+            <forward name="back_syudo_input" path="/main/man380.do" />
+            <forward name="deleteComp" path="/main/man002.do" />
+       </action>
+
+       <!-- ログイン履歴統計情報画面 -->
+       <action
+            name="man390Form"
+            path="/main/man390"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man390.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man390.Man390Action">
+            <forward name="backToMenu" path="/main/man002.do" />
+
+            <forward name="adminWebmail" path="/webmail/wml020.do" />
+            <forward name="adminSmail" path="/smail/sml100.do" />
+            <forward name="adminCircular" path="/circular/cir100.do" />
+            <forward name="adminFile" path="/file/fil200.do" />
+            <forward name="adminBulletin" path="/bulletin/bbs110.do" />
+            <forward name="adminChat" path="/chat/cht020.do" />
+
+            <forward name="statsWebmail" path="/webmail/wml300.do" />
+            <forward name="statsSmail" path="/smail/sml370.do" />
+            <forward name="statsCircular" path="/circular/cir210.do" />
+            <forward name="statsFile" path="/file/fil270.do" />
+            <forward name="statsBulletin" path="/bulletin/bbs180.do" />
+            <forward name="statsChat" path="/chat/cht070.do" />
+       </action>
+
+       <!-- ユーザ連携 時間設定 -->
+       <action
+            name="man420Form"
+            path="/main/man420"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man420.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man420.Man420Action">
+            <forward name="420_init" path="/main/man420.do" />
+            <forward name="420_back" path="/main/man002.do" />
+            <forward name="setting" path="/main/man420kn.do" />
+            <forward name="executeUsr" path="/main/man420.do?CMD=batchJobOk" />
+       </action>
+
+       <!-- ユーザ連携 時間設定確認画面 -->
+       <action
+            name="man420knForm"
+            path="/main/man420kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man420kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man420kn.Man420knAction">
+            <forward name="back" path="/main/man420.do" />
+            <forward name="mainAdminMenu" path="/main/man002.do" />
+       </action>
+
+       <!-- オープンリダイレクト制限設定 -->
+       <action
+            name="man430Form"
+            path="/main/man430"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man430.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man430.Man430Action">
+            <forward name="430_back" path="/main/man002.do" />
+            <forward name="OK" path="/main/man430kn.do" />
+       </action>
+
+       <!-- オープンリダイレクト制限設定確認画面 -->
+       <action
+            name="man430knForm"
+            path="/main/man430kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man430kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man430kn.Man430knAction">
+            <forward name="back" path="/main/man430.do" />
+            <forward name="mainAdminMenu" path="/main/man002.do" />
+       </action>
+
+       <!-- サイボウズLive移行(管理者設定) -->
+       <action
+            name="man440Form"
+            path="/main/man440"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man440.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man440.Man440Action">
+            <forward name="440_back" path="/main/man002.do" />
+            <forward name="grouplist" path="/user/usr010.do" />
+            <forward name="sisetuSettei" path="/reserve/rsv050.do" />
+            <forward name="fileManager" path="/file/fil010.do" />
+            <forward name="memberImport" path="/main/man450.do" />
+            <forward name="eventImport" path="/main/man460.do" />
+            <forward name="boardImport" path="/main/man470.do" />
+            <forward name="todoImport" path="/main/man480.do" />
+       </action>
+
+       <!-- CybozuLive メンバー名簿インポート -->
+       <action
+            name="man450Form"
+            path="/main/man450"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man450.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man450.Man450Action">
+            <forward name="450_back" path="/main/man440.do" />
+            <forward name="450_Import" path="/main/man450kn.do" />
+       </action>
+       <!-- CybozuLive メンバー名簿インポート確認画面 -->
+       <action
+            name="man450knForm"
+            path="/main/man450kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man450kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man450kn.Man450knAction">
+            <forward name="450kn_back" path="/main/man450.do" />
+            <forward name="cybozuConvertMenu" path="/main/man440.do" />
+       </action>
+
+       <!-- CybozuLive イベント情報インポート -->
+       <action
+            name="man460Form"
+            path="/main/man460"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man460.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man460.Man460Action">
+            <forward name="460_back" path="/main/man440.do" />
+            <forward name="460_Import" path="/main/man460kn.do" />
+       </action>
+       <!-- CybozuLive イベント情報インポート確認画面 -->
+       <action
+            name="man460knForm"
+            path="/main/man460kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man460kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man460kn.Man460knAction">
+            <forward name="460kn_back" path="/main/man460.do" />
+            <forward name="cybozuConvertMenu" path="/main/man440.do" />
+       </action>
+
+       <!-- CybozuLive 掲示板インポート -->
+       <action
+            name="man470Form"
+            path="/main/man470"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man470.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man470.Man470Action">
+            <forward name="470_back" path="/main/man440.do" />
+            <forward name="470_Import" path="/main/man470kn.do" />
+       </action>
+       <!-- CybozuLive 掲示板インポート確認画面 -->
+       <action
+            name="man470knForm"
+            path="/main/man470kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man470kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man470kn.Man470knAction">
+            <forward name="470kn_back" path="/main/man470.do" />
+            <forward name="cybozuConvertMenu" path="/main/man440.do" />
+       </action>
+       <!-- CybozuLive Todoリストインポート -->
+       <action
+            name="man480Form"
+            path="/main/man480"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man480.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man480.Man480Action">
+            <forward name="480_back" path="/main/man440.do" />
+            <forward name="480_Import" path="/main/man480kn.do" />
+       </action>
+       <!-- CybozuLive Todoリストインポート確認画面 -->
+       <action
+            name="man480knForm"
+            path="/main/man480kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man480kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man480kn.Man480knAction">
+            <forward name="480kn_back" path="/main/man480.do" />
+            <forward name="cybozuConvertMenu" path="/main/man440.do" />
+       </action>
+
+       <!-- サイボウズLive移行(個人設定) -->
+       <action
+            name="man490Form"
+            path="/main/man490"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man490.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man490.Man490Action">
+            <forward name="490_back" path="/main/man030.do" />
+            <forward name="man491" path="/main/man491.do" />
+       </action>
+       <!-- マイカレンダーインポート -->
+       <action
+            name="man491Form"
+            path="/main/man491"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man491.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man491.Man491Action">
+            <forward name="491_back" path="/main/man490.do" />
+            <forward name="491_Import" path="/main/man491kn.do" />
+       </action>
+       <!-- マイカレンダーインポート確認画面 -->
+       <action
+            name="man491knForm"
+            path="/main/man491kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man491kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man491kn.Man491knAction">
+            <forward name="491kn_back" path="/main/man491.do" />
+            <forward name="menu" path="/main/man490.do" />
+       </action>
+
+       <!-- 個人情報編集制限設定画面 -->
+       <action
+            name="man500Form"
+            path="/main/man500"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man500.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man500.Man500Action">
+            <forward name="man500Ok" path="/main/man500kn.do" />
+            <forward name="man500Back" path="/main/man002.do" />
+       </action>
+
+       <!-- 個人情報編集制限設定確認画面 -->
+       <action
+            name="man500knForm"
+            path="/main/man500kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man500kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man500kn.Man500knAction">
+            <forward name="man500knBack" path="/main/man500.do" />
+            <forward name="back" path="/main/man002.do" />
+       </action>
+       <!-- 個人情報編集制限設定画面 -->
+       <action
+            name="man510Form"
+            path="/main/man510"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man510.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man510.Man510Action">
+            <forward name="ok" path="/main/man510kn.do" />
+            <forward name="back" path="/main/man002.do" />
+       </action>
+
+       <!-- 個人情報編集制限設定確認画面 -->
+       <action
+            name="man510knForm"
+            path="/main/man510kn"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man510kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man510kn.Man510knAction">
+            <forward name="back" path="/main/man510.do" />
+            <forward name="comp" path="/main/man002.do" />
+       </action>
+
+       <!-- データ使用量一覧画面 -->
+       <action
+            name="man520Form"
+            path="/main/man520"
+            scope="request"
+            input="/WEB-INF/plugin/main/jsp/man520.jsp"
+            validate="false"
+            type="jp.groupsession.v2.man.man520.Man520Action">
+       </action>
+    </action-mappings>
+</struts-config>

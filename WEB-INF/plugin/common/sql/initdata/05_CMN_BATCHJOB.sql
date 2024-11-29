@@ -1,0 +1,17 @@
+ insert 
+ into 
+ CMN_BATCHJOB(
+   BAT_FR_DATE,
+   BAT_ADUSER,
+   BAT_ADDATE,
+   BAT_UPUSER,
+   BAT_UPDATE
+ )
+ values
+ (
+   5,
+   0,
+   current_timestamp,
+   0,
+   current_timestamp
+ );

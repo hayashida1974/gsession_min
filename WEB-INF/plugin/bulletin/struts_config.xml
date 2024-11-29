@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+      <form-bean name="bbsmainForm" type="jp.groupsession.v2.bbs.main.BbsMainForm" />
+      <form-bean name="bbs010Form" type="jp.groupsession.v2.bbs.bbs010.Bbs010Form" />
+      <form-bean name="bbs020Form" type="jp.groupsession.v2.bbs.bbs020.Bbs020Form" />
+      <form-bean name="bbs030Form" type="jp.groupsession.v2.bbs.bbs030.Bbs030Form" />
+      <form-bean name="bbs030knForm" type="jp.groupsession.v2.bbs.bbs030kn.Bbs030knForm" />
+      <form-bean name="bbs040Form" type="jp.groupsession.v2.bbs.bbs040.Bbs040Form" />
+      <form-bean name="bbs041Form" type="jp.groupsession.v2.bbs.bbs041.Bbs041Form" />
+      <form-bean name="bbs050Form" type="jp.groupsession.v2.bbs.bbs050.Bbs050Form" />
+      <form-bean name="bbs052Form" type="jp.groupsession.v2.bbs.bbs052.Bbs052Form" />
+      <form-bean name="bbs060Form" type="jp.groupsession.v2.bbs.bbs060.Bbs060Form" />
+      <form-bean name="bbs061Form" type="jp.groupsession.v2.bbs.bbs061.Bbs061Form" />
+      <form-bean name="bbs070Form" type="jp.groupsession.v2.bbs.bbs070.Bbs070Form" />
+      <form-bean name="bbs070knForm" type="jp.groupsession.v2.bbs.bbs070kn.Bbs070knForm" />
+      <form-bean name="bbs090Form" type="jp.groupsession.v2.bbs.bbs090.Bbs090Form" />
+      <form-bean name="bbs090knForm" type="jp.groupsession.v2.bbs.bbs090kn.Bbs090knForm" />
+      <form-bean name="bbs100Form" type="jp.groupsession.v2.bbs.bbs100.Bbs100Form" />
+      <form-bean name="bbs110Form" type="jp.groupsession.v2.bbs.bbs110.Bbs110Form" />
+      <form-bean name="bbs120Form" type="jp.groupsession.v2.bbs.bbs120.Bbs120Form" />
+      <form-bean name="bbs130Form" type="jp.groupsession.v2.bbs.bbs130.Bbs130Form" />
+      <form-bean name="bbs140Form" type="jp.groupsession.v2.bbs.bbs140.Bbs140Form" />
+      <form-bean name="bbs150Form" type="jp.groupsession.v2.bbs.bbs150.Bbs150Form" />
+      <form-bean name="bbs150knForm" type="jp.groupsession.v2.bbs.bbs150kn.Bbs150knForm" />
+      <form-bean name="bbs160Form" type="jp.groupsession.v2.bbs.bbs160.Bbs160Form" />
+      <form-bean name="bbs170Form" type="jp.groupsession.v2.bbs.bbs170.Bbs170Form" />
+      <form-bean name="bbs180Form" type="jp.groupsession.v2.bbs.bbs180.Bbs180Form" />
+      <form-bean name="bbs190Form" type="jp.groupsession.v2.bbs.bbs190.Bbs190Form" />
+      <form-bean name="bbs200Form" type="jp.groupsession.v2.bbs.bbs200.Bbs200Form" />
+      <form-bean name="bbs210Form" type="jp.groupsession.v2.bbs.bbs210.Bbs210Form" />
+      <form-bean name="bbs220Form" type="jp.groupsession.v2.bbs.bbs220.Bbs220Form" />
+      <form-bean name="bbsptl010Form" type="jp.groupsession.v2.bbs.ptl010.BbsPtl010Form" />
+      <form-bean name="bbsptl020Form" type="jp.groupsession.v2.bbs.ptl020.BbsPtl020Form" />
+    </form-beans>
+
+<!-- ================================================ Global Exception -->
+
+    <global-exceptions>
+    </global-exceptions>
+
+<!-- ========== Global Forward Definitions ============================== -->
+
+    <global-forwards type="org.apache.struts.action.ActionForward">
+        <forward name="backBBSList" path="/bulletin/bbs010.do" redirect="false" />
+        <forward name="moveThreadList" path="/bulletin/bbs060.do" />
+        <forward name="moveSearchDtl" path="/bulletin/bbs040.do" />
+        <forward name="moveSearchList" path="/bulletin/bbs041.do" />
+        <forward name="rsvThreadList" path="/bulletin/bbs170.do" />
+        <forward name="moveSoukouList" path="/bulletin/bbs220.do" />
+    </global-forwards>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+       <!-- メイン -->
+       <action
+            name="bbsmainForm"
+            path="/bulletin/bbsmain"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbsmain.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.main.BbsMainAction">
+       </action>
+
+       <!-- 掲示板 一覧 -->
+       <action
+            name="bbs010Form"
+            path="/bulletin/bbs010"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs010.Bbs010Action">
+            <forward name="confMenu" path="/bulletin/bbs110.do" />
+            <forward name="personal" path="/bulletin/bbs130.do" />
+            <forward name="memList" path="/bulletin/bbs100.do" />
+            <forward name="soukou" path="/bulletin/bbs220.do" />
+       </action>
+
+       <!-- フォーラム設定 -->
+       <action
+            name="bbs020Form"
+            path="/bulletin/bbs020"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs020.Bbs020Action">
+            <forward name="mine" path="/bulletin/bbs020.do" />
+            <forward name="addForum" path="/bulletin/bbs030.do" />
+            <forward name="editForum" path="/bulletin/bbs030.do" />
+            <forward name="confMenu" path="/bulletin/bbs110.do" />
+       </action>
+
+       <!-- フォーラム登録 -->
+       <action
+            name="bbs030Form"
+            path="/bulletin/bbs030"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs030.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs030.Bbs030Action">
+            <forward name="backForumList" path="/bulletin/bbs020.do" />
+            <forward name="moveConfirm" path="/bulletin/bbs030kn.do" />
+       </action>
+
+       <!-- フォーラム登録確認 -->
+       <action
+            name="bbs030knForm"
+            path="/bulletin/bbs030kn"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs030kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs030kn.Bbs030knAction">
+            <forward name="backToInput" path="/bulletin/bbs030.do" />
+            <forward name="backForumList" path="/bulletin/bbs020.do" />
+       </action>
+
+       <!-- 検索条件入力 -->
+       <action
+            name="bbs040Form"
+            path="/bulletin/bbs040"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs040.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs040.Bbs040Action">
+       </action>
+
+       <!-- 検索結果一覧 -->
+       <action
+            name="bbs041Form"
+            path="/bulletin/bbs041"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs041.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs041.Bbs041Action">
+            <forward name="moveThreadDtl" path="/bulletin/bbs070.do" />
+       </action>
+
+       <!-- 掲示板表示設定 -->
+       <action
+            name="bbs050Form"
+            path="/bulletin/bbs050"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs050.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs050.Bbs050Action">
+            <forward name="bbs130" path="/bulletin/bbs130.do" />
+       </action>
+
+       <!-- 掲示板ショートメール通知設定 -->
+       <action
+            name="bbs052Form"
+            path="/bulletin/bbs052"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs052.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs052.Bbs052Action">
+            <forward name="bbs130" path="/bulletin/bbs130.do" />
+       </action>
+
+       <!-- スレッド・投稿一覧 -->
+       <action
+            name="bbs060Form"
+            path="/bulletin/bbs060"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs060.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs060.Bbs060Action">
+            <forward name="mine" path="/bulletin/bbs060.do" />
+            <forward name="moveThread" path="/bulletin/bbs061.do" />
+            <forward name="addThread" path="/bulletin/bbs070.do" />
+            <forward name="editThread" path="/bulletin/bbs070.do" />
+            <forward name="addPost" path="/bulletin/bbs090.do" />
+            <forward name="movePostDtl" path="/bulletin/bbs090.do" />
+            <forward name="month" path="/schedule/sch020.do" />
+            <forward name="errMsg" path="/WEB-INF/plugin/bulletin/jsp/bbs060_errspace.jsp" />
+            <forward name="moveThreadMove" path="/bulletin/bbs061.do" />
+       </action>
+
+       <!-- スレッド移動 -->
+       <action
+            name="bbs061Form"
+            path="/bulletin/bbs061"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs061.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs061.Bbs061Action">
+            <forward name="mine" path="/bulletin/bbs061.do" />
+       </action>
+
+       <!-- スレッド作成 -->
+       <action
+            name="bbs070Form"
+            path="/bulletin/bbs070"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs070.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs070.Bbs070Action">
+            <forward name="moveThreadConfirm" path="/bulletin/bbs070kn.do" />
+       </action>
+
+       <!-- スレッド作成確認 -->
+       <action
+            name="bbs070knForm"
+            path="/bulletin/bbs070kn"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs070kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs070kn.Bbs070knAction">
+            <forward name="backToInput" path="/bulletin/bbs070.do" />
+       </action>
+
+       <!-- スレッド・投稿一覧(リダイレクト用) -->
+       <action
+            name="bbs060Form"
+            path="/bulletin/bbs080"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs060.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs060.Bbs060Action">
+       </action>
+
+       <!-- 投稿作成 -->
+       <action
+            name="bbs090Form"
+            path="/bulletin/bbs090"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs090.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs090.Bbs090Action">
+            <forward name="moveWriteConfirm" path="/bulletin/bbs090kn.do" />
+       </action>
+
+       <!-- 投稿作成確認 -->
+       <action
+            name="bbs090knForm"
+            path="/bulletin/bbs090kn"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs090kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs090kn.Bbs090knAction">
+            <forward name="backToInput" path="/bulletin/bbs090.do" />
+       </action>
+
+       <!-- フォーラムメンバー一覧 -->
+       <action
+            name="bbs100Form"
+            path="/bulletin/bbs100"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs100.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs100.Bbs100Action">
+            <forward name="backForumList" path="/bulletin/bbs010.do" />
+       </action>
+
+       <!-- 管理者設定メニュー -->
+       <action
+            name="bbs110Form"
+            path="/bulletin/bbs110"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs110.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs110.Bbs110Action">
+            <forward name="confForum" path="/bulletin/bbs020.do" />
+            <forward name="delConf" path="/bulletin/bbs120.do" />
+            <forward name="manualDelConf" path="/bulletin/bbs150.do" />
+            <forward name="admIniSetting" path="/bulletin/bbs200.do" />
+            <forward name="smlSetting" path="/bulletin/bbs160.do" />
+            <forward name="mainAdmSetting" path="/main/man002.do" />
+            <forward name="bbsLogCount" path="/bulletin/bbs180.do" />
+       </action>
+
+       <!-- 自動データ削除設定 -->
+       <action
+            name="bbs120Form"
+            path="/bulletin/bbs120"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs120.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs120.Bbs120Action">
+            <forward name="confMenu" path="/bulletin/bbs110.do" />
+            <forward name="changeOk" path="/bulletin/bbs120.do?CMD=bbs120commit" />
+            <forward name="changeCancel" path="/bulletin/bbs120.do?CMD=changeCancel" />
+       </action>
+
+       <!-- 掲示板個人設定 -->
+       <action
+            name="bbs130Form"
+            path="/bulletin/bbs130"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs130.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs130.Bbs130Action">
+            <forward name="bbs050" path="/bulletin/bbs050.do" />
+            <forward name="bbs052" path="/bulletin/bbs052.do" />
+            <forward name="bbs210" path="/bulletin/bbs210.do" />
+            <forward name="mainPriSetting" path="/main/man030.do" />
+       </action>
+
+       <!-- 閲覧状況確認 -->
+       <action
+            name="bbs140Form"
+            path="/bulletin/bbs140"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs140.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs140.Bbs140Action">
+       </action>
+
+       <!-- 手動データ削除画面 -->
+       <action
+            name="bbs150Form"
+            path="/bulletin/bbs150"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs150.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs150.Bbs150Action">
+            <forward name="backToMenu" path="/bulletin/bbs110.do" />
+            <forward name="syudo_del_kakunin" path="/bulletin/bbs150kn.do" />
+       </action>
+
+       <!-- 手動データ削除確認画面 -->
+      <action
+            name="bbs150knForm"
+            path="/bulletin/bbs150kn"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs150kn.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs150kn.Bbs150knAction">
+            <forward name="back_syudo_input" path="/bulletin/bbs150.do" />
+            <forward name="deleteComp" path="/bulletin/bbs110.do" />
+       </action>
+
+       <!-- 管理者設定 ショートメール通知設定画面 -->
+       <action
+            name="bbs160Form"
+            path="/bulletin/bbs160"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs160.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs160.Bbs160Action">
+            <forward name="backToMenu" path="/bulletin/bbs110.do" />
+       </action>
+
+       <!-- 掲示予定一覧画面 -->
+       <action
+            name="bbs170Form"
+            path="/bulletin/bbs170"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs170.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs170.Bbs170Action">
+            <forward name="moveThreadDtl" path="/bulletin/bbs070.do" />
+            <forward name="mine" path="/bulletin/bbs170.do" />
+       </action>
+
+       <!-- 管理者設定 統計情報 -->
+       <action
+            name="bbs180Form"
+            path="/bulletin/bbs180"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs180.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs180.Bbs180Action">
+            <forward name="backToMenu" path="/bulletin/bbs110.do" />
+
+            <forward name="adminCircular" path="/circular/cir100.do" />
+            <forward name="adminSmail" path="/smail/sml100.do" />
+            <forward name="adminFile" path="/file/fil200.do" />
+            <forward name="adminWebmail" path="/webmail/wml020.do" />
+            <forward name="adminChat" path="/chat/cht020.do" />
+            <forward name="adminMain" path="/main/man002.do" />
+
+            <forward name="statsCircular" path="/circular/cir210.do" />
+            <forward name="statsSmail" path="/smail/sml370.do" />
+            <forward name="statsFile" path="/file/fil270.do" />
+            <forward name="statsWebmail" path="/webmail/wml300.do" />
+            <forward name="statsChat" path="/chat/cht070.do" />
+            <forward name="statsMain" path="/main/man390.do" />
+       </action>
+
+       <!-- フォーラム選択画面(ラジオ選択) -->
+       <action
+            name="bbs190Form"
+            path="/bulletin/bbs190"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs190.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs190.Bbs190Action">
+       </action>
+
+       <!-- 掲示板初期値設定(管理者) -->
+       <action
+            name="bbs200Form"
+            path="/bulletin/bbs200"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs200.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs200.Bbs200Action">
+            <forward name="confMenu" path="/bulletin/bbs110.do" />
+            <forward name="mine" path="/bulletin/bbs200.do" />
+       </action>
+
+       <!-- 掲示板初期値設定(個人) -->
+       <action
+            name="bbs210Form"
+            path="/bulletin/bbs210"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs210.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs210.Bbs210Action">
+            <forward name="personal" path="/bulletin/bbs130.do" />
+            <forward name="mine" path="/bulletin/bbs210.do" />
+       </action>
+
+       <!-- 掲示板草稿一覧 -->
+       <action
+            name="bbs220Form"
+            path="/bulletin/bbs220"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbs220.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.bbs220.Bbs220Action">
+            <forward name="init" path="/bulletin/bbs220.do" />
+            <forward name="moveAddSoukouThread" path="/bulletin/bbs070.do" />
+            <forward name="moveAddSoukouToko" path="/bulletin/bbs090.do" />
+            <forward name="backThreadList" path="/bulletin/bbs060.do" />
+            <forward name="backTokoList" path="/bulletin/bbs060.do" />
+            <forward name="backForumList" path="/bulletin/bbs010.do" />
+       </action>
+
+       <!-- ポータル ポートレット -->
+       <action
+            name="bbsptl010Form"
+            path="/bulletin/bbsptl010"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbsptl010.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.ptl010.BbsPtl010Action">
+       </action>
+
+       <!-- ポータル ポートレットプラグイン -->
+       <action
+            name="bbsptl020Form"
+            path="/bulletin/bbsptl020"
+            scope="request"
+            input="/WEB-INF/plugin/bulletin/jsp/bbsptl020.jsp"
+            validate="false"
+            type="jp.groupsession.v2.bbs.ptl020.BbsPtl020Action">
+           <forward name="ptl080" path="/portal/ptl080.do" />
+           <forward name="filptl020" path="/file/filptl020.do" />
+           <forward name="filptl050" path="/file/filptl050.do" />
+           <forward name="zskptl020" path="/zaiseki/zskptl020.do" />
+           <forward name="bbsptl020" path="/bulletin/bbsptl020.do" />
+           <forward name="prjptl020" path="/project/prjptl020.do" />
+           <forward name="schptl020" path="/schedule/schptl020.do" />
+           <forward name="bmkptl020" path="/bookmark/bmkptl020.do" />
+       </action>
+
+    </action-mappings>
+
+</struts-config>

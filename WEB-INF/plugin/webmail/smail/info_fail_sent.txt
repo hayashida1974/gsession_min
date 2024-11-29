@@ -1,0 +1,5 @@
+◎Group Session WEBメール通知
+
+下記のメールの送信に失敗しました。
+
+件名: $TITLE

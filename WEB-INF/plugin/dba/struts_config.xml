@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="shift_jis" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<!-- ========== Form Bean Definitions =================================== -->
+
+    <form-beans>
+        <form-bean name="dba001Form" type="jp.groupsession.v2.dba.dba001.Dba001Form" />
+    </form-beans>
+
+<!-- ========== Action Mapping Definitions ============================== -->
+
+    <action-mappings>
+
+       <!-- DBA -->
+       <action
+            name="dba001Form"
+            path="/dba/dba001"
+            input="/WEB-INF/plugin/dba/jsp/dba001.jsp"
+            scope="request"
+            validate="false"
+            type="jp.groupsession.v2.dba.dba001.Dba001Action">
+       </action>
+       <action
+            name="dba001Form"
+            path="/dba/dba002"
+            input="/WEB-INF/plugin/dba/jsp/dba002.jsp"
+            scope="request"
+            validate="false"
+            type="jp.groupsession.v2.dba.dba001.Dba001Action">
+       </action>
+
+    </action-mappings>
+
+</struts-config>
